@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso HTML5 Avançado</title>
+        
+        <style>
+			#status { 
+				display:block;
+				padding:10px;
+				border:1px dotted #999;
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				color:#666;
+				font-size:12px;
+				margin-bottom:20px;
+				width:500px;
+			}
+
+			input[type=button] {
+				width:170px;
+				padding:10px;
+				color:#FFF;
+				background:linear-gradient(top, #F33, #933 );
+				background:-webkit-linear-gradient(top, #F33, #933 );
+				background:-moz-linear-gradient(top, #F33, #933 );
+				border:1px solid #333;
+				cursor:pointer;
+				border-radius:5px;
+				-webkit-border-radius:5px;
+				-moz-border-radius:5px;
+			}	
+			
+			img {
+				margin-bottom:20px;
+			}
+			
+		</style>
+    	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        
+        <script>        
+            var nav = null; 
+        
+			function pegarPosicao() {
+				document.getElementById("status").innerHTML = "aguarde..."; 
+				
+				if ( nav == null ) {
+					nav = window.navigator;	
+				}
+				
+				var geoloc = nav.geolocation;
+				if ( geoloc != null ) {
+					geoloc.getCurrentPosition(retornarPosicao, retornarFalha);	
+				}
+			}
+			
+			function retornarPosicao( posicao ) {
+				var mapa = document.getElementById("mapa");
+				var latitude = posicao.coords.latitude;
+				var longitude= posicao.coords.longitude;
+
+				document.getElementById("status").innerHTML = "Latitude: " + latitude + " Longitude: " + longitude;
+
+			}
+			
+			function retornarFalha( erro ) {
+				var mensagem = "";
+        
+                // Check for known errors
+                switch (erro.code) {
+                    case erro.PERMISSION_DENIED:
+                        mensagem = "Acesso a sua localização está desligado. Mude as configurações e volte."
+                        break;
+                        
+                    case erro.POSITION_UNAVAILABLE:
+                        mensagem = "Dados de localização estão indisponíveis no momento.";
+                        break;
+                        
+                    case erro.TIMEOUT:
+                        mensagem = "Sua localização pode não ser especificada por um determinado tempo.";
+                        break;
+                        
+                    default:
+                        break;
+                }
+				
+				
+				document.getElementById("status").innerHTML = mensagem;			
+			}
+			
+	
+        </script>
+        
+	</head>
+    <body>
+        <div id="status"></div>
+        <img id="mapa"></img>
+        
+        <input type="button" onclick="pegarPosicao()" value="Pegar Geolocalização"  /> 
+    </body>
+
+</html>

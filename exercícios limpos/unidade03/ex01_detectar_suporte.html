@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso HTML5 Avançado</title>
+        
+        <style>
+			#status { 
+				display:block;
+				padding:10px;
+				border:1px dotted #999;
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				color:#666;
+				font-size:12px;
+				margin-bottom:20px;
+				width:500px;
+			}
+
+			input[type=button] {
+				width:170px;
+				padding:10px;
+				color:#FFF;
+				background:linear-gradient(top, #F33, #933 );
+				background:-webkit-linear-gradient(top, #F33, #933 );
+				background:-moz-linear-gradient(top, #F33, #933 );
+				border:1px solid #333;
+				cursor:pointer;
+				border-radius:5px;
+				-webkit-border-radius:5px;
+				-moz-border-radius:5px;
+			}			
+		</style>
+    
+        <script>        
+            var nav = null; 
+        
+			function pegarPosicao() {
+				document.getElementById("status").innerHTML = "aguarde..."; 
+			}
+	
+        </script>
+        
+	</head>
+    <body>
+        <div id="status"></div>
+        
+        <input type="button" onclick="pegarPosicao()" value="Pegar Geolocalização"  /> 
+    </body>
+
+</html>
