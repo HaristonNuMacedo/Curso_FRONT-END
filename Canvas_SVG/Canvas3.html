@@ -1,41 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas 3</title>
-
-    <script src="js/cake.js"></script>
-    <script>
-
-        // Exercício 03
-        function desenhar() {
-            var canvas = new Canvas(document.body,1200,1200);
-            var meuCirculo = new Circle(50,{
-                id:'meuCirculo',
-                x: canvas.width/1,
-                y: canvas.heigth/1,
-                stroke:'blue',
-                strokeWidth:10,
-                endAngle:Math.PI*2
-            });
-
-            meuCirculo.addFrameListener(
-                function(t,dt) {
-                    this.scale = Math.sin(t/500);
-                }
-            )
-            canvas.append(meuCirculo);
-        }
-        window.onload = desenhar;
-    </script>
-    
+    <title>Circulo Canvas</title>
 </head>
 <body>
-
-    
-
-
+    <canvas id="myCanvas" height=200 width=200 style="border:1px solid #000000;"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.moveTo(100,0);
+            ctx.lineTo(100,200);
+            ctx.stroke();
+            
+        function drawCircle(x){
+            ctx.beginPath();
+            ctx.arc(x,100,10,0,2*Math.PI);
+            ctx.fillStyle="red";
+            ctx.fill();
+        }
+        var x = 0;
+        setInterval(function(){
+        ctx.clearRect(0,0,200,200);
+        drawCircle(x%200);
+        x++;
+    }, 25);
+    </script>
 </body>
 </html>
