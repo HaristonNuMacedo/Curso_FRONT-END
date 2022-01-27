@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas 3</title>
+
+    <script src="js/cake.js"></script>
+    <script>
+
+        // Exercício 03
+        function desenhar() {
+            var canvas = new Canvas(document.body,1200,1200);
+            var meuCirculo = new Circle(50,{
+                id:'meuCirculo',
+                x: canvas.width/1,
+                y: canvas.heigth/1,
+                stroke:'blue',
+                strokeWidth:10,
+                endAngle:Math.PI*2
+            });
+
+            meuCirculo.addFrameListener(
+                function(t,dt) {
+                    this.scale = Math.sin(t/500);
+                }
+            )
+            canvas.append(meuCirculo);
+        }
+        window.onload = desenhar;
+    </script>
+    
+</head>
+<body>
+
+    
+
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas e SVG</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI';
+        }
+
+        /* exercio 01 */
+        .exercio01 {
+            width: 300px;
+            height: auto;
+            margin-left: 10px;
+            background-color: #999;
+            margin-top: -7px;
+        }
+
+        .exercio01 p {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .exercio01 svg {
+            background-color: #666;
+            width: 300px;
+            height: 300px;
+        }
+
+        /* exercio 02 */
+        .exercio02 {
+            width: 400px;
+            height: 250px;
+            margin-left: 10px;
+            background-color: #999;
+            margin-top: -7px;
+        }
+
+        .exercio02 p {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        /* exercio 03 */
+        .exercio03 {
+            width: 400px;
+            height: 200px;
+            margin-left: 10px;
+            background-color: #999;
+            margin-top: -7px;
+            position: relative;
+            top: -620px;
+            left: 420px;
+        }
+
+        .exercio03 p {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        /* exercio 04 */
+        .grafico {
+				width:500px;margin:0 auto;
+                position: relative;
+                top: -580px;
+			}
+			
+        .grafico	svg {
+				background-image:url(imagens/background_grafico.png);
+				background-repeat:no-repeat;
+			}	
+    </style>
+</head>
+<body>
+    
+                        <!-- EXERCÍCIO 01 -->
+
+    <div class="exercio01">
+        <p>Exercício 01</p>
+        <svg>
+            <circle cx='175' 
+                    cy='175' 
+                    r='50' 
+                    fill='#999' 
+                    stroke='#fff' 
+                    stroke-width='2'>
+            </circle>
+
+            <circle cx='150' 
+                    cy='150' 
+                    r='50' 
+                    fill='#333' 
+                    stroke='#fff' 
+                    stroke-width='2'
+                    fill-opacity='0.8'>
+            </circle>
+
+            <circle cx='125' 
+                    cy='125' 
+                    r='50' 
+                    fill='#000' 
+                    stroke='#fff' 
+                    stroke-width='2'
+                    fill-opacity='0.8'>
+            </circle>
+        </svg>
+    </div>
+
+                            <!-- EXERCÍCIO 02 -->
+
+    <div class="exercio02">
+        <p>Exercício 02</p>
+        <svg heigth='800' width='800'>
+            <polygon points="173,182 319,182 246,38" fill="#ff0"></polygon>
+            <polygon points="90,15 150,15 190,75 150,135 90,135 50,75" fill="#ff0"></polygon>
+        </svg>
+    </div>    
+
+
+                            <!-- EXERCÍCIO 03 -->
+
+    <div class="exercio03">
+        <p>Exercício 03</p>
+        <svg heigth='500' width='500'>
+            <line x1='50' y1='100'
+                  x2='350' y2='100'
+                  stroke='blue'
+                  stroke-width='5'></line>
+        </svg>
+    </div>    
+
+                            <!-- EXERCÍCIO 04 -->
+    <div class="grafico">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="490" height="370" >
+            <line x1='95' y1='323' x2='95' y2='150' style="stroke: red; stroke-width: 30;"></line>
+            <line x1='167' y1='323' x2='167' y2='180' style="stroke: red; stroke-width: 30;"></line>
+            <line x1='238' y1='323' x2='238' y2='100' style="stroke: red; stroke-width: 30;"></line>
+        </svg>
+    </div>
+</body>
+</html>

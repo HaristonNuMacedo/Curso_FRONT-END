@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas 2</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI';
+        }
+
+        .exer02 {
+            width: 490px;
+            height: 400px;
+            background-color: #aaa;
+            margin-left: 15px;
+        }
+
+        .exer02 p {
+            text-align: center;
+            position: relative; 
+            top: 10px;
+        }
+
+        #minhaTela {
+            background: url(imagens/background_grafico.png);
+            width: 490px;
+            height: 375px;
+        }
+
+    </style>
+</head>
+<body>
+
+                            <!-- EXERCÍCIO 02 -->
+    <div class="exer02">
+        <p>Exercício 02</p>
+        <canvas id="minhaTela" height="400" width="500">
+            
+        </canvas>
+    </div>
+    
+
+    <script>
+
+        // Exercício 02
+        function desenhar() {
+            var canvas = document.querySelector('#minhaTela');
+            if(canvas.getContext) {
+                var linha = canvas.getContext('2d');
+                linha.lineWidth = 5;
+                linha.strokeStyle = 'blue';
+                linha.moveTo(100,340);
+                linha.lineTo(170,150);
+                linha.lineTo(240,250);
+                linha.lineTo(310,120);
+                linha.stroke();
+            }
+        }
+        window.onload = desenhar;
+    </script>
+
+</body>
+</html>
