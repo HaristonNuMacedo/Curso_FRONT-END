@@ -9,12 +9,32 @@
 			#status { 
 				display:block;
 				padding:10px;
-				border:1px dotted #999;
+				border:2px dotted #999;
 				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 				color:#666;
 				font-size:12px;
 				margin-bottom:20px;
-				width:500px;
+				width:510px;
+			}
+
+			#statusLati {
+				padding:10px;
+				border:1px solid #999;
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				color:#666;
+				font-size:12px;
+				margin-bottom:5px;margin-top: 5px;margin-left: 10px;
+				width:150px;
+			}
+
+			#statusLong {
+				padding:10px;
+				border:1px solid #999;
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				color:#666;
+				font-size:12px;
+				margin-bottom:5px;margin-top: 5px;margin-left: 10px;
+				width:150px;
 			}
 
 			input[type=button] {
@@ -44,17 +64,23 @@
 
                 var geoloc = nav.geolocation;
                 if (geoloc != null) {
-                    geoloc.getCurrentPosition(retornarPosicao, retornarFalha);
+                    geoloc.getCurrentPosition( retornarPosicao, retornarFalha );
                 }
 
-                function retornarPosicao() {
-                    var mensagem = 'Foi possível identificar a sua posição';
+                function retornarPosicao(posicao) {
+                    var mensagem = 'Sucesso! Foi possível identificar a sua posição';
+					var latitude = posicao.coords.latitude;
+					var longitude = posicao.coords.longitude;
                     document.getElementById("status").innerHTML = mensagem;
+					document.getElementById("statusLati").innerHTML = 'Latitude: ' + latitude;
+					document.getElementById("statusLong").innerHTML = 'Longitude: ' + longitude;
                 }
 
                 function retornarFalha() {
                     var mensagem = 'Não foi possível identificar a sua posição. Tente novamente.';
                     document.getElementById("status").innerHTML = mensagem;
+					document.getElementById("statusLati").innerHTML = 'Latitude: ';
+					document.getElementById("statusLong").innerHTML = 'Longitude: ';
                 }
 			}
 	
@@ -64,7 +90,11 @@
     <body>
         <div id="status"></div>
         
-        <input type="button" onclick="pegarPosicao()" value="Pegar Geolocalização"  /> 
+		<div style="display: inline-flex;">
+        	<input type="button" onclick="pegarPosicao()" value="Pegar Geolocalização"  /> 
+			<div id="statusLati"><labe>Latitude: </labe></div>
+			<div id="statusLong"><labe>Longitude: </labe></div>
+		</div>
     </body>
 
 </html>
