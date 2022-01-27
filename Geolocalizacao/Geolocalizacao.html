@@ -76,8 +76,26 @@
 					document.getElementById("statusLong").innerHTML = 'Longitude: ' + longitude;
                 }
 
-                function retornarFalha() {
-                    var mensagem = 'Não foi possível identificar a sua posição. Tente novamente.';
+                function retornarFalha(erro) {
+                    var mensagem = "";
+
+					switch (erro.code) {
+                    case erro.PERMISSION_DENIED:
+                        mensagem = "Acesso a sua localização está desligado. Mude as configurações e volte."
+                        break;
+                        
+                    case erro.POSITION_UNAVAILABLE:
+                        mensagem = "Dados de localização estão indisponíveis no momento.";
+                        break;
+                        
+                    case erro.TIMEOUT:
+                        mensagem = "Sua localização pode não ser especificada por um determinado tempo.";
+                        break;
+                        
+                    default:
+                        break;
+                }
+
                     document.getElementById("status").innerHTML = mensagem;
 					document.getElementById("statusLati").innerHTML = 'Latitude: ';
 					document.getElementById("statusLong").innerHTML = 'Longitude: ';
@@ -89,6 +107,7 @@
 	</head>
     <body>
         <div id="status"></div>
+		<img id="mapa"></img>
         
 		<div style="display: inline-flex;">
         	<input type="button" onclick="pegarPosicao()" value="Pegar Geolocalização"  /> 
