@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício de audio</title>
+	    <style>
+            body {
+                background-color:#a7a7a7;
+            }
+
+            #audio {
+                width:450px;
+                height:50px;
+                margin:100px auto 0;
+                box-shadow:0 0 8px #666;			
+            }
+
+            #audio audio {
+                width: 100%;
+            }
+
+            footer {
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:14px;
+                color:#333;
+                width:483px;
+                margin:30px auto;
+                background-color:#bababa;	
+                padding:20px 0;
+                text-align:center;
+            }
+
+            .botoes{
+                position: relative;
+                text-align: center;
+            }
+        </style>
+	</head>
+
+    <body>
+    	<section id="audio">
+            <audio controls id="player">
+                <source src="musica/Alok, Sofi Tukker & INNA - It Don't Matter (Official Lyric Video).mp3" type="audio/mpeg">
+            </audio>
+    	</section>
+        
+        <footer>
+        	Alok, Sofi Tukker & INNA - It Don't Matter (Official Lyric Video)
+        </footer>
+
+        <form>
+            <div class="botoes">
+                <input type="button" value="&#9654; Play" onclick="play()">
+                <input type="button" value="&#61; Pause" onclick="pause()">
+                <input type="button" value="&#9724; Stop" onclick="stop()">
+            </div>
+        </form>
+        
+        <script>
+            var audio;
+            function inicial() {
+                audio = document.querySelector('#player');
+            }
+
+            function play() {
+                audio.play();
+            }
+
+            function pause() {
+                audio.pause();
+            }
+
+            function stop() {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+
+            window.onload = inicial;
+        </script>
+    </body>
+</html>
