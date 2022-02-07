@@ -14,7 +14,7 @@
         .quadro {
             position: relative;
             left: 500px;
-            top: 50px;
+            top: 10px;
             width: 312px;
             height: 312px;
             padding: 4px;
@@ -95,6 +95,36 @@
 
             background-color: rgba(255, 255, 255, 0.3);
         }
+
+        #janela 
+            {
+                position: absolute;
+                width: 324px;
+                height:120px;
+                border-radius: 5px;
+                background-color:#FFF;
+                top: 400px;
+                left: 0px;
+            }
+            
+            #janela:before, #janela:after {
+                position: absolute;
+                left:5px;
+                top: 50%;
+                bottom: 15px;
+                width: 50%;
+                background: #999;
+                box-shadow: 0 15px 10px #555;
+                transform: rotate(-4deg);
+                content: "";
+                z-index: -1;
+            }
+
+            #janela:after {
+                right: 5px;
+                left: auto;
+                transform: rotate(4deg);
+            }
     </style>
 </head>
 <body>
@@ -104,6 +134,7 @@
         <div class="janela"></div>
         <div class="janela"></div>
         <footer>&copy;Copyright/2022</footer>
+        <div id="janela"></div>
     </div>
 
     
