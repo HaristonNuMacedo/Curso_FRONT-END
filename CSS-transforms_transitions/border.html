@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+
+    <style>
+        body {
+            background-color: #999;
+        }
+
+        .quadro {
+            position: relative;
+            left: 500px;
+            top: 50px;
+            width: 312px;
+            height: 312px;
+            padding: 4px;
+            background-color: #fff;
+        }
+
+        .janela:nth-child(1){
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+
+            border-top-left-radius: 25px;
+        }
+
+        .janela:nth-child(1):hover{
+            left: 7px;
+            top: 7px;
+        }
+
+        .janela:nth-child(2) {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            top: 165px;
+
+            border-bottom-left-radius: 25px;
+        }
+
+        .janela:nth-child(2):hover{
+            left: 7px;
+            top: 162px;
+        }
+
+        .janela:nth-child(3){
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            left: 165px;
+
+            border-top-right-radius: 25px;
+        }
+
+        .janela:nth-child(3):hover{
+            left: 162px;
+            top: 7px;
+        }
+
+        .janela:nth-child(4) {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            top: 165px;
+            left: 165px;
+
+            border-bottom-right-radius: 25px;
+        }
+
+        .janela:nth-child(4):hover{
+            left: 162px;
+            top: 162px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: -50px;
+            left: 0px;
+            font-weight: 600;
+
+            border-top: #fff solid 2px;
+            border-bottom: #fff solid 2px;
+            width: 100%;
+            padding: 2px;
+            text-align: center;
+
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="quadro">
+        <div class="janela"></div>
+        <div class="janela"></div>
+        <div class="janela"></div>
+        <div class="janela"></div>
+        <footer>&copy;Copyright/2022</footer>
+    </div>
+
+    
+</body>
+</html>
