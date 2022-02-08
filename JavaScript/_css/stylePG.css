@@ -41,7 +41,27 @@ input:hover {
 input:focus {
 	border: 1px solid #333;
 	outline:none;
-	border-bottom: 4px solid #999;
+	border-bottom: 4px solid rgb(35, 157, 187);
+}
+
+select {
+	width: 332px;
+	padding: 15px;
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #999;
+	font-size: 1.3em;
+	color: #444;
+
+	-webkit-appearance:none; 
+	background:#E9E9E9 url("/JavaScript/_img/right-arrow.png") 95.5% 50% no-repeat;
+}
+
+select:focus {
+	border: 1px solid #333;
+	outline:none;
+	border-top: 4px solid rgb(35, 157, 187);
 }
 
 #msg {
