@@ -39,8 +39,9 @@ input:hover {
 }
 
 input:focus {
-	border:1px solid #333;
+	border: 1px solid #333;
 	outline:none;
+	border-bottom: 4px solid #999;
 }
 
 #msg {
