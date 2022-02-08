@@ -76,6 +76,10 @@ input#btn {
 	color:#111;
 }
 
+input#btn:hover {
+	background-color: #ccc;
+}
+
 
 
 	/* MENSAGEM DE VERIFICAÇÃO NOME */

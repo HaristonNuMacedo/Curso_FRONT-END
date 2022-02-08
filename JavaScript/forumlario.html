@@ -10,7 +10,6 @@
     <body>
         <main>
             <h1>Formulário</h1>
-            <form action="ex02-eventos2.html" method="post">
                 <!-- VERIFICAR NOME -->
                 <div id="msg"></div><div id="msg2"></div>
                 <input type="text"  id="nome"   name="nome"   data-color="#fff"  placeholder="Nome"  />
@@ -28,8 +27,11 @@
                     <option value="f">Feminino </option>
                     <option value="ind">outros </option>
                 </select>
-                <input type="submit" value="Confirmar" id="btn"/>            
-            </form>
+                <input type="submit" value="Confirmar" id="btn"/>  
+                
+                <label>Resultado do Formulário:</label>
+                <div id="resultado"  name="resultado"  placeholder="Resultado"></div>
+           
         </main>
     </body>
 
@@ -52,6 +54,18 @@
             }
             return false;
         });
-    
+
+
+        function atribuirTexto(valor) {
+            resultado.innerHTML = "Olá, " + valor + ". Seja Bem-vindo a nossa página!";
+        }
+
+        function iniciar() {
+            btn.addEventListener('click', function() {
+                let nome = document.getElementById('nome').value;
+                atribuirTexto(nome);
+            });
+        }
+        window.onload = iniciar;
     </script>
 </html>
