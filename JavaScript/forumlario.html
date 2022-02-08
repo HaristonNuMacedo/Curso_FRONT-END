@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulário Verificação</title>
+        <link href="_css/stylePG.css" rel="stylesheet">
+        <script src="_scripts/evento.js"></script> 
+    </head>
+
+    <body>
+        <main>
+            <h1>Formulário</h1>
+            <form action="ex02-eventos2.html" method="post">
+                <!-- VERIFICAR NOME -->
+                <div id="msg"></div><div id="msg2"></div>
+                <input type="text"  id="nome"   name="nome"   data-color="#fff"  placeholder="Nome"  />
+
+                <!-- VERIFICAR E-MAIL -->
+                <div id="msgE"></div><div id="msgE2"></div>
+                <input type="email" id="email"  name="email"   data-color2="#fff"  placeholder="Email" />	
+
+
+                <!-- VERIFICAR SEXO -->
+                <div id="msgS"></div>
+                <select id="sexo" name="sexo"  data-color3="#fff">
+                    <option>Sexo: </option>
+                    <option value="m">Masculino </option>
+                    <option value="f">Feminino </option>
+                    <option value="ind">outros </option>
+                </select>
+                <input type="submit" value="Confirmar" id="btn"/>            
+            </form>
+        </main>
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        // ------------------------------------------------------------
+        // SEXO DO FORMULÁRIO
+        var select = document.getElementById("sexo");
+        let texto = document.getElementById('msgS');
+        $("#sexo").on('change', function(e) {
+            let sexo = $(this).val();
+            if (sexo == 'm') {
+                texto.innerHTML = 'Você escolheu o sexo masculino.';
+            } else if (sexo == 'f') {
+                texto.innerHTML = 'Você escolheu o sexo feminino.';
+            } else if (sexo == 'ind') {
+                texto.innerHTML = 'Você escolheu o sexo indefinido.';
+            } else {
+                texto.innerHTML = '';
+            }
+            return false;
+        });
+    
+    </script>
+</html>
