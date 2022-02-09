@@ -1,0 +1,22 @@
+@charset "ISO-8859-2";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding:0;
+	background-color: #F6E2C6;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 12px;
+}
+
+#janela {
+	padding:10px;
+	background-color:#FFFFFF;
+	width:auto;
+}
+
+img {
+    display: block;
+    float: left;
+	margin:10px 10px 10px 0;
+}
