@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sair Página</title>
+
+    <style>
+        div#posicaoX, div#posicaoY {
+            display: block;
+        }
+
+        div#janela {
+            display: none;
+            position: fixed;
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: 20%;
+            background-color: rgba(33, 33, 33, 0.7);
+        }
+
+        div#janela .textoJ {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 10%;
+            left: 10%;
+            background-color: #eee;
+            border: 1px solid #0000af;
+            padding: 5px;
+            margin: -5px;
+        }
+
+        div#janela .textoJ H2{
+            text-align: center;
+        }
+
+        div#janela .textoJ label{
+            text-align: justify;
+            padding: 20px;
+        }
+
+        div#janela #sair {
+            position: absolute;
+            right: -8px;
+            top: -12px;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: #0000af;
+            padding: 7px 10px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            color: #ddd; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="posicaoX"></div>
+    <div id="posicaoY"></div>
+
+    <div id="janela">
+        <div id="sair" onclick="fechar()">X</div>
+        <div class="textoJ">
+            <H2>Você saiu da página!</h2>
+            <label>O usuário saiu da página, após o seu cursor sair do plano carteziano. 
+                Caso queira voltar basta fazer um refresh na página. 
+                <br><br>Também basta somente clicar no 'X' apra fechar a janela.</label>
+        </div>
+    </div>
+    <script src="_scripts/sair.js"></script>
+</body>
+</html>
