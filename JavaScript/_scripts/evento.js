@@ -30,7 +30,7 @@ window.onload = function() {
         console.log('off');
         var verificar = 'off';
 
-        var label = document.getElementById("msg2");     
+        var label2 = document.getElementById("msg2");     
         //label.innerHTML = "teste";
         let i;
         for(i = 0; caixa.length; i++) {
@@ -44,27 +44,29 @@ window.onload = function() {
             }
 
             if (caixa.value == "") {
-                label.innerHTML = '&#9664; Campo está vazio. Por favor, preenche-o com nome.';
+                label2.innerHTML = '&#9664; Campo está vazio. Por favor, preenche-o com nome.';
             } else {
-                label.innerHTML = '';
+                label2.innerHTML = '';
             }
-        } 
+        } else {
+            label2.innerHTML = '';
+        }
     }
 
 
     // -----------------------------------------------------------
     // E-MAIL DO FOMULÁRIO
 
-    var caixa = document.querySelector('input#email');
-    caixa.onfocus = function() {
+    var caixa2 = document.querySelector('input#email');
+    caixa2.onfocus = function() {
         console.log('on');
         var verificar = 'on';
 
-        var label = document.getElementById("msgE");     
+        var label01 = document.getElementById("msgE");     
         //label.innerHTML = "teste";
         let i;
-        for(i = 0; caixa.length; i++) {
-            caixa[i].addEventListener('click', changecolor2);
+        for(i = 0; caixa2.length; i++) {
+            caixa2[i].addEventListener('click', changecolor2);
         }
 
             if (verificar == 'on') {
@@ -72,11 +74,13 @@ window.onload = function() {
                     let color = this.getAttribute('data-color');
                     document.documentElement.style.setProperty('--color', color);
                 }
-                label.innerHTML = '&#9664; Digite o seu E-mail, por favor!';
-            } 
+                label01.innerHTML = '&#9664; Digite o seu E-mail, por favor!';
+            } else {
+                label01.innerHTML = '';
+            }
     }
 
-    caixa.onblur = function() {  
+    caixa2.onblur = function() {  
         console.log('off');
         var verificar = 'off';
 
@@ -93,12 +97,14 @@ window.onload = function() {
                 document.documentElement.style.setProperty('--color2', color2);
             }
 
-            if (caixa.value == "") {
+            if (caixa2.value == "") {
                 label02.innerHTML = '&#9664; Campo está vazio. Por favor, preenche-o com E-mail.';
             } else {
                 label02.innerHTML = '';
             }
-        } 
+        } else {
+            label02.innerHTML = '';
+        }
     }
     
 }
