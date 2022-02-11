@@ -63,11 +63,18 @@
             border: 2px solid #000;
             color: #ddd; cursor: pointer;
         }
+
+        .posicao_J {
+            position: relative;
+            top: 470px;
+        }
     </style>
 </head>
 <body>
     <div id="posicaoY"></div>
 
+    <label class="posicao_J">A janela vai aparecer mais ou menos por aqui</label>
+    
     <div id="janela">
         <div id="sair" onclick="fechar()">X</div>
         <div class="textoJ">
@@ -82,7 +89,7 @@
         window.addEventListener('scroll', function() {
             posicaoY.innerHTML = window.scrollY;
 
-            if (window.scrollY >= 300 ) {
+            if (window.scrollY >= 400 && window.scrollY <=500) {
                 janela.style.display = 'block';
             }
         });
