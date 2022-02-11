@@ -120,11 +120,31 @@ window.onload = function() {
             label02.innerHTML = '';
         }
     }
+
+
+
+    // CHECKBOX DO PAIS
+    escolherpais.onclick = function() {
+        if (escolherpais.checked) {
+            pais.style.display = 'block';
+        } else {
+            pais.style.display = 'none';
+        }
+    }
+    pais.style.display = 'none';
 }
 
 function enviar() {
     var nome = document.querySelector('input#nome').value;
     var email = document.querySelector('input#email').value;
+    var pais = document.querySelector('input#pais');
+    var escolherpais = document.querySelector('input#escolherpais');
+
+    if (escolherpais.checked == false) {
+        var nPais = pais.value = 'Brasil';
+        dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>País : ' + nPais;
+    } else {
+        dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>País : ' + pais.value;
+    }
     
-    dados.innerHTML = 'Nome: ' + nome + '<br>Email : ' + email;
 }

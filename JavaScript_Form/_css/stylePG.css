@@ -136,3 +136,23 @@ input#btn:hover {
 	color: black;
 	border-bottom: 1px solid black;
 }
+
+
+.divChecar {
+	display: inline-flex;
+}
+
+.divChecar #escolherpais {
+	position: relative;
+	left: -100px;
+}
+
+.divChecar .labelCheckBox {
+	position: relative;
+	left: -235px;
+	top: -2px;
+}
+
+/*div#pais {
+	display: none;
+}*/
