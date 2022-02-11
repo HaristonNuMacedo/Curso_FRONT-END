@@ -122,7 +122,7 @@ window.onload = function() {
     }
 
 
-
+    // ---------------------------------------------------------------
     // CHECKBOX DO PAIS
     escolherpais.onclick = function() {
         if (escolherpais.checked) {
