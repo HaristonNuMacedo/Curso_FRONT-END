@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Out</title>
+
+    <script src="_scripts/mudancaFoto.js"></script>
+
+    <style>
+        #janela {
+            background-color: #ccc;
+            width: 150px;
+            padding: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="foto">
+        <img src="_img/projetos-de-casas-casa-Gramado-fachada-de-casa-moderna-min.jpg" alt="fotos" width="560" height="360" id="espacoFoto"/>
+    </div>
+
+    <div id="janela">5</div>
+    <script>
+        var indi = 5;
+        var intervalo;
+
+        function mudarValor() {
+            indi --;
+            janela.innerHTML = indi;
+           
+            // Começando do Zero e se a contagem for 3, if > 3+1
+            // Començando do Um contagem igual > 3, com o indíce vindo primeiro.
+            if (indi < 1) {
+                clearInterval(intervalo);
+                janela.innerHTML = "Contagem Encerrada!";
+            }
+        }
+        intervalo = setInterval(mudarValor, 1500);
+    </script>
+</body>
+</html>
