@@ -5,8 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+	        font-size:14px;
+	        color: #111;
+        }
+
+        #botao, #botao2 {
+            margin-left: 10px;
+            padding: 5px 15px;
+            background-color: aliceblue;
+            border: 1px solid #444;
+            border-radius: 4px;
+            display: inline-flex;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="link">
+        <form action="">
+            <div type="button" id="botao" >Página 01</div>
+            <div type="button" id="botao2" >Página 02</div>
+        </form>
+    </div>
+    <div id="janela"></div>
+
+    <script>
+        
+            // Primeiro Botão
+            document.getElementById('botao').onclick = function() {
+                var ajax = null;
+                if ( window.XMLHttpRequest ) {
+                    ajax = new XMLHttpRequest();
+                } else if ( window.ActiveXObject) {
+                    ajax = new ActiveXObject('Msxml2.XMLHTTP');
+                }
+                ajax.open('GET', 'pagina_dados.html', true);
+                ajax.send(null);
+                ajax.onreadystatechange = function() {
+                    if (ajax.readyState == 4) {
+                        if (ajax.status == 200) {
+                            document.getElementById('janela').innerHTML = ajax.responseText;
+                        }
+                    }
+                }
+            }
+
+            // Secundo Botão
+            document.getElementById('botao2').onclick = function() {
+                var ajax = null;
+                if ( window.XMLHttpRequest ) {
+                    ajax = new XMLHttpRequest();
+                } else if ( window.ActiveXObject) {
+                    ajax = new ActiveXObject('Msxml2.XMLHTTP');
+                }
+                ajax.open('GET', 'forumlario.html', true);
+                ajax.send(null);
+                ajax.onreadystatechange = function() {
+                    if (ajax.readyState == 4) {
+                        if (ajax.status == 200) {
+                            document.getElementById('janela').innerHTML = ajax.responseText;
+                        }
+                    }
+                }
+            }
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulário Verificação</title>
+        <link href="_css/stylePG00.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+            <h1>Formulário</h1>
+                <!-- VERIFICAR NOME -->
+                <div id="msg"></div><div id="msg2"></div>
+                <input type="text"  id="nome"   name="nome"   data-color="#fff"  placeholder="Nome"  />
+
+                <!-- VERIFICAR E-MAIL -->
+                <div id="msgE"></div><div id="msgE2"></div>
+                <input type="email" id="email"  name="email"   data-color2="#fff"  placeholder="Email" />	
+
+                <select id="sexo" name="sexo"  data-color3="#fff">
+                    <option>Sexo: </option>
+                    <option value="m">Masculino </option>
+                    <option value="f">Feminino </option>
+                    <option value="ind">outros </option>
+                </select>
+
+                <!-- VERIFICAR PAIS -->
+                <input type="text"  id="pais"   name="pais"   data-color="#fff"  placeholder="Qual País?"  />
+
+                <input type="submit" value="Confirmar" id="btn" onclick="enviar()"/>  
+        </main>
+    </body>
+    <script>
+        
+    </script>
+</html>
