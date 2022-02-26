@@ -80,6 +80,21 @@ input#btn:hover {
 	background-color: #ccc;
 }
 
+#link {
+	position: relative;
+	left: 25px;
+	text-align: start;
+	width: 98%;
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+}
+
+#link label {
+	color: #000;
+	font-size: 18px;
+	margin-left: 15px;
+}
+
 #botao, #botao2 {
 	padding: 5px 15px;
 	background-color: aliceblue;
@@ -87,6 +102,23 @@ input#btn:hover {
 	border-radius: 4px;
 	display: inline-flex;
 	cursor: pointer;
+	font-size: 16px;
+}
+
+#home {
+	display: inline-flex;
+	margin-left: 10px;
+	margin-top: 0px;
+	padding: 5px 5px;
+	background-color: aliceblue;
+	border: 1px solid #444;
+	border-radius: 4px;
+	display: inline-flex;
+	cursor: pointer;
+	font-size: 20px;
+	position: relative;
+	top: 4px;
+	width: 20px; height: 20px;
 }
 
 

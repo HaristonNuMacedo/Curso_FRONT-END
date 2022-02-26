@@ -11,24 +11,63 @@
             font-family:Arial, Helvetica, sans-serif;
 	        font-size:14px;
 	        color: #111;
+            background-color: #555;
         }
 
-        #botao, #botao2 {
+        #link {
+            position: absolute;
+            width: 99%;
+            border-bottom: 1px solid transparent;
+            text-align: center;
+            top: 40%;
+        }
+
+        #link label {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        #botao, #botao2{
             margin-left: 10px;
-            padding: 5px 15px;
+            margin-top: 10px;
+            padding: 15px 40px;
             background-color: aliceblue;
             border: 1px solid #444;
             border-radius: 4px;
             display: inline-flex;
             cursor: pointer;
+            font-size: 20px;
+        }
+
+        #home {
+            display: inline-flex;
+            margin-left: 10px;
+            margin-top: 0px;
+            padding: 10px 10px;
+            background-color: aliceblue;
+            border: 1px solid #444;
+            border-radius: 4px;
+            display: inline-flex;
+            cursor: pointer;
+            font-size: 20px;
+            position: relative;
+            top: 10px;
+            width: 32px; height: 32px;
+        }
+
+        #botao:hover, #botao2:hover, #home:hover {
+            background-color: #444;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div id="link">
         <form action="">
+            <label>Escolha a página para exbir.</label><br>
             <div type="button" id="botao" >Página 01</div>
             <div type="button" id="botao2" >Página 02</div>
+            <div type="button" id="home" ><img src="_imagens/home.png"></div>
         </form>
     </div>
     <div id="janela"></div>
@@ -71,6 +110,11 @@
                         }
                     }
                 }
+            }
+
+            // Home Botão
+            document.getElementById('home').onclick = function() {
+                window.location.href = "primeiroAjax.html";
             }
 
     </script>
