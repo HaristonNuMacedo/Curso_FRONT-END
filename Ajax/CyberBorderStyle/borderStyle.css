@@ -1,0 +1,324 @@
+
+        #container {
+            position: relative;
+            width: 520px;
+            height: 320px;
+            background-color: transparent;
+        }
+
+        #imagemCyber {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            
+        }
+
+        #imagemCyber :before {
+            content: '';
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip);
+            z-index: -1;
+        }
+
+        .cybr-border {
+            --shadow-primary: #10bbe6;
+
+            --clip: polygon(0 0, 100% 0%, 100% 100%, 0% 0%, 90% 90%, 85% 0%, 100% 0%, 100% 100%, 100% 100%);
+            transform: rotate(180deg);
+
+            
+
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            font-weight: 700;
+            border: 0;
+            min-width: 50px;
+            height: 50px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border:after, .cybr-border:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip);
+            z-index: -1;
+
+        }
+        
+        .cybr-border:before {
+            background: var(--shadow-primary);
+            
+        }
+
+
+        .cybr-border02 {
+            --shadow-primary: #10bbe6;
+
+            --clip01: polygon(0 0, 100% 0%, 100% 100%, 100% 0%, 0% 0%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            transform: rotate(180deg);
+
+            
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-weight: 700;
+            border: 0;
+            min-width: 350px;
+            height: 25px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border02:after, .cybr-border02:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip01);
+            z-index: -1;
+
+        }
+        
+        .cybr-border02:before {
+            background: var(--shadow-primary);
+            
+        }
+
+        .cybr-border03 {
+            --shadow-primary: #10bbe6;
+
+            --clip: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 100% 100%, 100% 100%, 100% 0%, 100% 0%, 0% 100%);
+            transform: rotate(0deg);
+
+            
+
+            position: absolute;
+            top: 0px;
+            left: 350px;
+            font-weight: 700;
+            border: 0;
+            min-width: 40px;
+            height: 25px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border03:after, .cybr-border03:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip);
+            z-index: -1;
+
+        }
+        
+        .cybr-border03:before {
+            background: var(--shadow-primary);
+            
+        }
+
+
+        .cybr-border04 {
+            --shadow-primary: #10bbe6;
+
+            --clip02: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 100% 100%, 100% 100%, 100% 0%, 100% 10%, 100% 100%);
+            transform: rotate(0deg);
+
+            
+
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-weight: 700;
+            border: 0;
+            margin: 0px;
+            min-width: 40px;
+            height: 40px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border04:after, .cybr-border04:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip02);
+            z-index: -1;
+
+        }
+        
+        .cybr-border04:before {
+            background: var(--shadow-primary);
+            
+        }
+
+
+        .cybr-border05 {
+            --shadow-primary: #10bbe6;
+
+            --clip03: polygon(0 0, 100% 0%, 100% 100%, 100% 0%, 0% 0%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            transform: rotate(0deg);
+
+            
+
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-weight: 700;
+            border: 0;
+            margin: 0px;
+            min-width: 15px;
+            height: 300px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border05:after, .cybr-border05:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip03);
+            z-index: -1;
+
+        }
+        
+        .cybr-border05:before {
+            background: var(--shadow-primary);
+            
+        }
+
+
+        .cybr-border06 {
+            --shadow-primary: #10bbe6;
+
+            --clip: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 100% 100%, 100% 100%, 100% 0%, 100% 0%, 100% 100%);
+            transform: rotate(0deg);
+
+            
+
+            position: absolute;
+            top: 300px;
+            right: 0px;
+            font-weight: 700;
+            border: 0;
+            min-width: 15px;
+            height: 20px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border06:after, .cybr-border06:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip);
+            z-index: -1;
+
+        }
+        
+        .cybr-border06:before {
+            background: var(--shadow-primary);
+            
+        }
+
+
+        .cybr-border07 {
+            --shadow-primary: #10bbe6;
+
+            --clip01: polygon(0 0, 100% 0%, 100% 100%, 100% 0%, 0% 0%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            transform: rotate(180deg);
+
+            
+
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-weight: 700;
+            border: 0;
+            min-width: 325px;
+            height: 25px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border07:after, .cybr-border07:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip01);
+            z-index: -1;
+
+        }
+        
+        .cybr-border07:before {
+            background: var(--shadow-primary);
+            
+        }
+
+
+        .cybr-border08 {
+            --shadow-primary: #10bbe6;
+
+            --clip: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 100% 100%, 100% 100%, 100% 0%, 100% 0%, 0% 100%);
+            transform: rotate(180deg);
+
+            
+
+            position: absolute;
+            bottom: 0px;
+            right: 325px;
+            font-weight: 700;
+            border: 0;
+            min-width: 40px;
+            height: 25px;
+            line-height: 75px;
+            display: inline-block;
+        }
+        
+        .cybr-border08:after, .cybr-border08:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            clip-path: var(--clip);
+            z-index: -1;
+
+        }
+        
+        .cybr-border08:before {
+            background: var(--shadow-primary);
+            
+        }
+
+        
