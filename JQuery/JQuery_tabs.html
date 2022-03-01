@@ -8,6 +8,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
+        <link rel="stylesheet" href="_css/tabs.css">
         <script>
              $(function() {
                 var meuTab = $('#tabs').tabs({
@@ -30,51 +31,6 @@
             });
         </script> 
 
-        <style>
-
-            #tabes{
-                margin-top: 20px;
-            } 
-
-            #tabes.ui-tabs-vertical {
-                width: 900px;
-            }
-
-            #tabes.ui-tabs-vertical .ui-tabs-nav{
-                display: inline-block;
-                background: none;
-                border: none;
-                margin-top: 25px;
-                margin-left: 10px;
-            }
-
-            #tabes.ui-tabs-vertical .ui-tabs-nav li{
-                border: 1px solid gray;
-                clear: left; /* deixa um embaixo do outro*/
-                margin-bottom: 5px;
-                outline: none;
-                width: 200px;
-            }
-
-            #tabes.ui-tabs-vertical .ui-tabs-nav li a{
-                width: 200px;
-                display: block;
-                outline: none;
-            }
-
-            #tabes.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active{
-                margin-bottom: 5px;
-                outline: none;
-                width: 200px;
-                background-color: #333;
-            }
-
-            .ui-tabs-vertical .ui-tabs-panel {
-                float: right;
-                width: 650px;
-                padding: 2px;
-            }
-        </style>
     </head>
     <body>
         <div id="tabs">

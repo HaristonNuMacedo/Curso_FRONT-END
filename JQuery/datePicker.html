@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI DatePicker</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script>
+            $(function() {
+
+                var config = {
+                    monthNames:['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    dayNamesMin:['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+                    prevText: 'Anterior',
+                    nextText: 'Próximo',
+                    dateFormat: 'dd/mm/yy',
+                    minDate: '+0', // Não deixa selecionar datas anteriores ao dia atual
+                    maxDate: '+2m-5d' // Limitar a data o quanto quiser
+                }
+
+                // Atribuindo a variável config do calendário para o método datepicker
+                $('#voo_ida').datepicker(config);
+                $('#voo_volta').datepicker(config);
+            })
+        </script>        
+    </head>
+    <body>
+        <p>Voo de Ida: <input type="text" id="voo_ida" class="data_voo"></p>
+        <p>Voo de Volta: <input type="text" id="voo_volta" class="data_voo"></p>
+    </body>
+</html>
