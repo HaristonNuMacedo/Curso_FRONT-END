@@ -5,106 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="_css/pagina01.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script>
+         $(function() {
+            $('#tabs').tabs();
+        })
+    </script> 
+
 </head>
 
 <style>
-    body {
-        background-color: #333;
-    }
-
-    #cubo {
-        background-color: aqua;
-        border: 1px solid white;
-        text-align: center;
-        width: 95%;
-        margin-left: 2.5%;
-        height: 120px;
-        position: relative;
-        margin-top: 10px;
-    }
-
-    #cubo p {
-        font-size: 20px;
-    }
-
-    #link {
-	position: relative;
-	left: 25px;
-	text-align: start;
-	width: 98%;
-	border-bottom: 1px solid #fff;
-	padding-bottom: 10px;
-}
-
-#link label {
-	color: #fff;
-	font-size: 18px;
-	margin-left: 15px;
-}
-
-#botao, #botao2 {
-	padding: 5px 15px;
-	background-color: aliceblue;
-	border: 1px solid #444;
-	border-radius: 4px;
-	display: inline-flex;
-	cursor: pointer;
-	font-size: 16px;
-}
-
-#home {
-            display: inline-flex;
-            margin-left: 10px;
-            margin-top: 0px;
-            padding: 5px 5px;
-            background-color: aliceblue;
-            border: 1px solid #444;
-            border-radius: 4px;
-            display: inline-flex;
-            cursor: pointer;
-            font-size: 20px;
-            position: relative;
-            top: 4px;
-            width: 20px; height: 20px;
-        }
-
-    .textoAjax {
-        width: 90%;
-        margin-left: 5%;
-    }
-
-    .textoAjax p {
-        font-size: 18px;
-    }
-
-    #janela {
-        width: 80%;
-        margin-left: 10%;
-        margin-top: 10px;
-        background-color: #fff;
-        padding: 20px;
-        height: 480px;
-    }
+    
 
 </style>
 <body>
     <div id="cubo">
         <h1>Teste Ajax</h1>
-        <p>Treinamento com ajax. Aprimorando os conhecimentos em Front-End</p>
+        <p>Treinamento com ajax e JQuery. Aprimorando os conhecimentos em Front-End</p>
     </div>
-
-    <div class="textoAjax">
-    <p><strong>AJAX</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
-        por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo HTML ou XHTML, 
-        CSS, JavaScript, DOMl, XML, XSLT, e o mais importante: objeto XMLHttpRequest. <br>
     
-        Quando essas tecnologias são combinadas no modelo AJAX, as aplicações web que a utilizam são capazes de fazer rapidamente 
-        atualizações incrementais para a interface do usuário sem recarregar a página inteira do navegador. Isso torna a aplicação mais rápida e sensível às ações do usuário.</p>
-
-    <p>Embora a letra X em AJAX corresponda ao XML, atualmente o JSON é mais utilizado que o XML devido às suas vantagens, 
-        como ser mais leve e ser parte do JavaScript. Ambos (JSON e XML) são utilizados ​​para obter informações do pacote no modelo AJAX.</p>
-
-    </div>
+            <div class="textoAjax">
+                <p><strong>AJAX</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
+                    por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo HTML ou XHTML, 
+                    CSS, JavaScript, DOMl, XML, XSLT, e o mais importante: objeto XMLHttpRequest. <br>
+                
+                    Quando essas tecnologias são combinadas no modelo AJAX, as aplicações web que a utilizam são capazes de fazer rapidamente 
+                    atualizações incrementais para a interface do usuário sem recarregar a página inteira do navegador. Isso torna a aplicação mais rápida e sensível às ações do usuário.</p>
+            
+                <p>Embora a letra X em AJAX corresponda ao XML, atualmente o JSON é mais utilizado que o XML devido às suas vantagens, 
+                    como ser mais leve e ser parte do JavaScript. Ambos (JSON e XML) são utilizados ​​para obter informações do pacote no modelo AJAX.</p>
+            
+            </div>
 
 </body>
 </html>

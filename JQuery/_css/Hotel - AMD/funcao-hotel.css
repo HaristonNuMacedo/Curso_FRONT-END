@@ -1,0 +1,348 @@
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #353535; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+
+
+
+
+
+
+  .ui-accordion .ui-accordion-content {
+    padding: 0em 0em;
+    border-top: 0;
+    overflow: auto;
+    background-color: #151515;
+}
+
+
+
+
+
+
+
+
+
+
+.seasonSuite00{
+    position: relative;
+    background-color: #151515;
+    width: 100%;
+    height: 450px;
+}
+
+.text h2{
+    color: #fff;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    padding-top: 0px;
+}
+
+.img-Suite3{
+    position: absolute;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.img-Suite3 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.img-Suite3 .pst1{
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    border: 1px solid white;
+    padding: 10px 15px 0px 15px;
+    margin-left: 177px;
+}
+
+.img-Suite3 .pst1 h3{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: -10px;
+}
+
+.img-Suite3 .pst2{
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    border: 1px solid white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    margin-left: 150px;
+}
+
+.img-Suite3 .pst2 h3{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: -10px;
+}
+
+.img-Suite3 .pst3{
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    border: 1px solid white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    margin-left: 150px;
+}
+
+.img-Suite3 .pst3 h3{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.seasonSuite22{
+    position: relative;
+    background-color: #151515;
+    width: 100%;
+    height: 450px;
+}
+
+.text2 h2{
+    color: #fff;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    padding-top: 0px;
+}
+
+.img-Suite2{
+    position: absolute;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+.img-Suite2 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.img-Suite2 .fst1{
+    display: inline-block;
+    width: 200px;
+    height: 255px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
+    border-radius: 2px;
+    padding: 15px 15px 0px 15px;
+    margin-left: 177px;
+}
+
+.img-Suite2 .fst1 h3{
+    position: relative;
+    text-align: center;
+    color: black;
+    top: -10px;
+}
+
+.img-Suite2 .fst2{
+    display: inline-block;
+    width: 200px;
+    height: 255px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-left: 150px;
+}
+
+.img-Suite2 .fst2 h3{
+    position: relative;
+    text-align: center;
+    color: black;
+    top: -10px;
+}
+
+.img-Suite2 .fst3{
+    display: inline-block;
+    width: 200px;
+    height: 255px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-left: 150px;
+}
+
+.img-Suite2 .fst3 h3{
+    position: relative;
+    text-align: center;
+    color: black;
+    top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.seasonSuite44{
+    position: relative;
+    background-color: #151515;
+    width: 100%;
+    height: 450px;
+}
+
+.text3 h2{
+    color: #fff;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    padding-top: 0px;
+}
+
+.img-Suite1{
+    position: absolute;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.img-Suite1 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.img-Suite1 .vst1{
+    display: inline-block;
+    width: 200px;
+    height: 255px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
+    border-radius: 2px;
+    padding: 15px 15px 0px 15px;
+    margin-left: 177px;
+}
+
+
+.img-Suite1 .vst1 h3{
+    position: relative;
+    text-align: center;
+    color: black;
+    top: -10px;
+}
+
+.img-Suite1 .vst2{
+    display: inline-block;
+    width: 200px;
+    height: 255px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-left: 150px;
+}
+
+.img-Suite1 .vst2 h3{
+    position: relative;
+    text-align: center;
+    color: black;
+    top: -10px;
+}
+
+.img-Suite1 .vst3{
+    display: inline-block;
+    width: 200px;
+    height: 255px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.5);
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-left: 150px;
+}
+
+.img-Suite1 .vst3 h3{
+    position: relative;
+    text-align: center;
+    color: black;
+    top: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(function() {
+            $('#accordion').accordion({
+                active:0, 
+                collapsible:true,
+                animate: 400,
+                heightStyle:'content',
+                icons:{'header':"ui-icon-plus", 'activeHeader':"ui-icon-minus"}
+            });
+        })
+    </script>
+
+    <link rel='stylesheet' href="_css/Hotel - AMD/funcao-hotel.css">
+    <link rel='stylesheet' href="_css/Hotel - AMD/responsivo.css">
+
+</head>
+<body>
+    <div class="acPai">
+        <div id="accordion">
+            <h3>Opção 1</h3>
+                <section>
+                    <div id="st1" class="seasonSuite44">
+                        <div class="text3">
+                            <h2>Suite 1 Quartos</h2>
+                        </div>
+                        <div class="img-Suite1">
+                            <div class="vst1">
+                                <img src="">
+                                <h3>Qualidade</h3>
+                            </div>
+                            <div class="vst2">
+                                <img src="">
+                                <h3>Espaço e Conforto</h3>
+                            </div>
+                            <div class="vst3">
+                                <img src="">
+                                <h3>Extras</h3>
+                            </div>
+                        </div>
+                    </div>
+            
+                </section>
+
+            <h3>Opção 2</h3>
+                <section>
+                    <div id="st2" class="seasonSuite22">
+                        <div class="text2">
+                            <h2>Suite 2 Quartos</h2>
+                        </div>
+                        <div class="img-Suite2">
+                            <div class="fst1">
+                                <img src="">
+                                <h3>Qualidade</h3>
+                            </div>
+                            <div class="fst2">
+                                <img src="">
+                                <h3>Espaço e Conforto</h3>
+                            </div>
+                            <div class="fst3">
+                                <img src="">
+                                <h3>Extras</h3>
+                            </div>
+                        </div>
+                    </div>
+            
+                </section>
+
+            <h3>Opção 3</h3>
+            <section >
+                <div id="st3" class="seasonSuite00">
+                    <div class="text">
+                        <h2>Suite 3 Quartos</h2>
+                    </div>
+                    <div class="img-Suite3">
+                        <div class="pst1">
+                            <img src="">
+                            <h3>Qualidade</h3>
+                        </div>
+                        <div class="pst2">
+                            <img src="">
+                            <h3>Espaço e Conforto</h3>
+                        </div>
+                        <div class="pst3">
+                            <img src="">
+                            <h3>Extras</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+    </div>
+</body>
+</html>

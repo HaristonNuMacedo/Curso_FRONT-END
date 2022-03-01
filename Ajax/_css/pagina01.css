@@ -1,0 +1,77 @@
+body {
+    background-color: #333;
+}
+
+#cubo {
+    background-color: aqua;
+    border: 1px solid white;
+    text-align: center;
+    width: 95%;
+    margin-left: 2.5%;
+    height: 120px;
+    position: relative;
+    margin-top: 10px;
+}
+
+#cubo p {
+    font-size: 20px;
+}
+
+#link {
+position: relative;
+left: 25px;
+text-align: start;
+width: 98%;
+border-bottom: 1px solid #fff;
+padding-bottom: 10px;
+}
+
+#link label {
+color: #fff;
+font-size: 18px;
+margin-left: 15px;
+}
+
+#botao, #botao2 {
+padding: 5px 15px;
+background-color: aliceblue;
+border: 1px solid #444;
+border-radius: 4px;
+display: inline-flex;
+cursor: pointer;
+font-size: 16px;
+}
+
+#home {
+        display: inline-flex;
+        margin-left: 10px;
+        margin-top: 0px;
+        padding: 5px 5px;
+        background-color: aliceblue;
+        border: 1px solid #444;
+        border-radius: 4px;
+        display: inline-flex;
+        cursor: pointer;
+        font-size: 20px;
+        position: relative;
+        top: 4px;
+        width: 20px; height: 20px;
+    }
+
+.textoAjax {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.textoAjax p {
+    font-size: 18px;
+}
+
+#janela {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 20px;
+    height: 480px;
+}

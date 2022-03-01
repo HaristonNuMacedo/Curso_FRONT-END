@@ -1,0 +1,65 @@
+
+@media screen and (min-width: 1440px){
+
+    img.te1{
+        width: 100.5%; 
+        height: 700px;
+    }
+
+    header.col{
+        height: 400px;
+    }
+
+    .test{
+        top: 40px;
+        left: 41.5%;
+    }
+
+    .row .scrpiti{
+        width: 75%;
+        left: 9px;
+    }
+
+    .qntdQ{
+        left: 175px;
+    }
+
+    .qntdR{
+        left: 375px;
+    } 
+
+    .img-hotel2{
+        left: 9px;
+
+    }
+
+    #octogono{	
+	    left: 35.8%;
+    }
+
+    .row2 .season2{
+        width: 700px;
+        top: 55px;
+        right: 90px;
+    }
+
+    div.menu ul {
+        left: 452px; 
+    }
+
+    .frase{
+        left: 30%;
+    }
+
+    .img-Suite3 .pst1{
+        margin-left: 305px;
+    }
+
+    .img-Suite2 .fst1{
+        margin-left: 305px;
+    }
+
+    .img-Suite1 .vst1{
+        margin-left: 305px;
+    }
+}

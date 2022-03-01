@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Menu</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script>
+            $(function() {
+                $('#menu').menu();
+            })
+        </script>
+
+        <style>
+            .ui-menu {
+                width: 430px;
+                display: inline-flex;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <ul id="menu">
+            <li><div>Principal</div></li>
+            <li><div>Pizzas</div>
+                <ul style="width: 220px;">
+                    <li><div>Calabresa</div></li>
+                    <li><div>Quatro Queijos</div></li>
+                    <li><div>Chocolate com morango</div></li>
+                </ul>
+            </li>
+            <li><div>Franquias</div>
+                <ul style="width: 150px;">
+                    <li><div>São-Paulo</div></li>
+                    <li><div>De Chester</div></li>
+                    <li><div>Retrife</div></li>
+                </ul>
+            </li>
+            <li><div>Sobre mais</div></li>
+            <li><div>Xontato</div></li>
+        </ul>
+    </body>
+</html>
