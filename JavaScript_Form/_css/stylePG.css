@@ -56,7 +56,7 @@ select {
 	color: #444;
 
 	-webkit-appearance:none; 
-	background:#E9E9E9 url("/JavaScript/_img/right-arrow.png") 95.5% 50% no-repeat;
+	background:#E9E9E9 url("../_img/right-arrow.png") 95.5% 50% no-repeat;
 }
 
 select:focus {
@@ -78,6 +78,18 @@ input#btn {
 
 input#btn:hover {
 	background-color: #ccc;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+	margin: 0;
+	padding: 0;
 }
 
 
