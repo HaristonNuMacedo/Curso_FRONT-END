@@ -10,9 +10,70 @@
         
         <script>
              $(function() {
-                $('#tabs').tabs();
+                var meuTab = $('#tabs').tabs({
+                    active:0,
+                    collapsible:false,
+                    //event:"mouseover"
+                });
+
+                meuTab.find('.ui-tabs-nav').sortable({
+                    axis: "x",
+                    stop: function() {
+                        meuTab.tabs("refresh");
+                    }
+                })
             })
+
+            $(function() {
+                $( "#tabes" ).tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+                $( "#tabes li" ).removeClass("ui-corner-top" ).addClass("ui-corner-left").addClass("ui-corner-right");
+            });
         </script> 
+
+        <style>
+
+            #tabes{
+                margin-top: 20px;
+            } 
+
+            #tabes.ui-tabs-vertical {
+                width: 900px;
+            }
+
+            #tabes.ui-tabs-vertical .ui-tabs-nav{
+                display: inline-block;
+                background: none;
+                border: none;
+                margin-top: 25px;
+            }
+
+            #tabes.ui-tabs-vertical .ui-tabs-nav li{
+                border: 1px solid gray;
+                clear: left; /* deixa um embaixo do outro*/
+                margin-bottom: 5px;
+                outline: none;
+                width: 200px;
+            }
+
+            #tabes.ui-tabs-vertical .ui-tabs-nav li a{
+                width: 200px;
+                display: block;
+                outline: none;
+            }
+
+            #tabes.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active{
+                margin-bottom: 5px;
+                outline: none;
+                width: 200px;
+                background-color: #333;
+            }
+
+            .ui-tabs-vertical .ui-tabs-panel {
+                float: right;
+                width: 650px;
+                padding: 2px;
+            }
+        </style>
     </head>
     <body>
         <div id="tabs">
@@ -25,7 +86,7 @@
 
             <div id="tab1">
                 <h3>Calabresa</h3>
-                <p><strong>JQuery</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
+                <p><strong>Calabresa</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
                     por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo HTML ou XHTML, 
                     CSS, JavaScript, DOMl, XML, XSLT, e o mais importante: objeto XMLHttpRequest. <br>
                 
@@ -39,7 +100,7 @@
 
             <div id="tab2">
                 <h3>Marguerita</h3>
-                <p><strong>JQuery</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
+                <p><strong>Marguerita</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
                     por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo HTML ou XHTML, 
                     CSS, JavaScript, DOMl, XML, XSLT, e o mais importante: objeto XMLHttpRequest. <br>
                 
@@ -53,7 +114,7 @@
 
             <div id="tab3">
                 <h3>Quatro Queijos</h3>
-                <p><strong>JQuery</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
+                <p><strong>Quatro Queijos</strong> é o acrônimo para JavaScript assíncrono + XML. Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 
                     por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo HTML ou XHTML, 
                     CSS, JavaScript, DOMl, XML, XSLT, e o mais importante: objeto XMLHttpRequest. <br>
                 
@@ -65,6 +126,29 @@
             
             </div>
 
+        </div>
+
+
+        <div id="tabes">
+            <ul>
+                <li><a href="#tabs-1">Pizza de Calabresa</a></li>
+                <li><a href="#tabs-2">Pizza de Margherita</a></li>
+                <li><a href="#tabs-3">Pizza de Camarão</a></li>
+            </ul>
+            
+            <div id="tabs-1">
+                <h2>Pizza de Calabresa</h2>
+                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+            </div>
+            <div id="tabs-2">
+                <h2>Pizza de Margherita</h2>
+                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+            </div>
+            <div id="tabs-3">
+                <h2>Pizza de Camarão</h2>
+                <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+            </div>
         </div>
         
     </body>
