@@ -6,6 +6,42 @@
         <link href="_css/stylePG.css" rel="stylesheet">
         <script src="../JavaScript_Form/_scripts/eventoForm.js"></script> 
     
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <style>
+            input#valor {
+                border: none;
+                padding: 10px;
+                margin-top: 10px;
+                font-size: 18px;
+                width: 150px;
+            }
+
+            #slider {
+                width: 300px;
+                margin-left: 18px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function() {
+                $('#slider').slider({
+                    step:1,
+                    value:0,
+                    min:0,
+                    max:10,
+                    slide: function(event,ui) {
+                        $('#valor').val("" + ui.value);
+                    }
+                });
+                if ($('#valor').val() == 0) {
+                    $('#valor').val('Nenhum Filho');
+                } else {
+                    $('#valor').val($('#slider').slider('value', 0));
+                }
+            })
+            
+        </script>       
     </head>
     <body>
         <main>
@@ -27,6 +63,19 @@
 
                 <input type="date" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento" />	
 
+                <!-- VERIFICAR Quantidade de Filhos -->
+                <h3>Você possui filhos?</h3>
+                <div class="divChecar02">
+                    <input type="checkbox" name="qtdFilhos" id="qtdFilhos">
+                    <label for="qtdFilhos" class="labelCheckBox">Sim</label>
+                </div>
+
+                <div id="filhos">
+                    <div id="slider"></div>
+                    <input type="text" id="valor">
+                </div>
+                <!-- VERIFICAR Quantidade de Filhos -->
+
                 <!-- VERIFICAR PAIS -->
                 <h3>Você é estrangeiro?</h3>
                 <div class="divChecar">
@@ -35,6 +84,7 @@
                 </div>
 
                 <input type="text"  id="pais"   name="pais"   data-color="#fff"  placeholder="Qual País?"  />
+                 <!-- VERIFICAR PAIS -->
 
                 <input type="submit" value="Confirmar" id="btn" onclick="enviar()"/>  
 

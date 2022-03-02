@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Slider</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <style>
+            input[type="text"] {
+                border: none;
+                padding: 5px;
+                margin-top: 20px;
+                font-size:80%;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function() {
+                $('#slider').slider({
+                    step:5,
+                    values:[300,700],
+                    min:100,
+                    max:1000,
+                    range:true,
+                    slide: function(event,ui) {
+                        $('#valor').val("R$ " + ui.values[0]);
+                        $('#valor2').val("R$ " + ui.values[1]);
+                    }
+                });
+                $('#valor').val('R$ ' + $('#slider').slider('values', 0));
+                $('#valor2').val('R$ ' + $('#slider').slider('values', 1));
+            })
+            
+        </script>        
+    </head>
+    <body>
+        <div id="slider"></div>
+
+        <label for="min">Valor Mínimo</label>
+        <input type="text" id="valor">
+
+        <label for="min">Valor Máximo</label>
+        <input type="text" id="valor2">
+    </body>
+</html>

@@ -124,6 +124,17 @@ window.onload = function() {
 
     // ---------------------------------------------------------------
     // CHECKBOX DO PAIS
+    qtdFilhos.onclick = function() {
+        if (qtdFilhos.checked) {
+            filhos.style.display = 'block';
+        } else {
+            filhos.style.display = 'none';
+        }
+    }
+    filhos.style.display = 'none';
+
+    // ---------------------------------------------------------------
+    // CHECKBOX DO PAIS
     escolherpais.onclick = function() {
         if (escolherpais.checked) {
             pais.style.display = 'block';

@@ -165,6 +165,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	top: -2px;
 }
 
+
+.divChecar02 {
+	display: inline-flex;
+}
+
+.divChecar02 #qtdFilhos {
+	position: relative;
+	left: -100px;
+}
+
+.divChecar02 .labelCheckBox {
+	position: relative;
+	left: -235px;
+	top: -2px;
+}
 /*div#pais {
 	display: none;
 }*/
