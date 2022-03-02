@@ -6,6 +6,7 @@
             background-color: transparent;
             left: 650px;
             top: 210px;
+            z-index: 1;
         }
 
         #imagemCyber {

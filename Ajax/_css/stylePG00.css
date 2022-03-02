@@ -130,4 +130,42 @@ input#btn:hover {
 }
 
 
+#janelas {
+    position: absolute;
+    width: 520px;
+    height: 320px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, hsl(226, 96%, 11%), hsl(182, 87%, 56%))!important;
+	box-shadow: 10px 15px 15px hsl(182, 45%, 26%);
+    top: 200px;
+    left: 638px;
+	z-index: 0.5;
+	content: "";
+	border: 0px solid #222;
+}
 
+
+
+  .container01 {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	background:
+	  radial-gradient(at 50% 0, black, transparent 70%);
+	background-size: 100% 15px;
+	background-repeat: no-repeat;
+  }
+  
+  .underline {
+	  width: 6em;
+	  text-align:center;
+	  font-size:30px;
+  }
+  
+  .underline:after {
+	  content: '\00a0';
+	  float:left;
+	  width:100%;
+  }
