@@ -151,6 +151,8 @@ function enviar() {
     var filho = document.querySelector('input#valor').value;
     
     var dataNasc = document.querySelector('input#dataNasc').value;
+    data = new Date(dataNasc);
+    dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
     
     var pais = document.querySelector('input#pais');
     var escolherpais = document.querySelector('input#escolherpais');
@@ -158,9 +160,9 @@ function enviar() {
     if (nome != "" && email != "" && dataNasc != "") {
         if (escolherpais.checked == false) {
             var nPais = pais.value = 'Brasil';
-            dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>Data de Nascimento: ' + dataNasc + '<br>Quantidade de Filhos: ' + filho + '<br>País : ' + nPais;  
+            dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + nPais;  
         } else {
-            dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>Data de Nascimento: ' + dataNasc + '<br>Quantidade de Filhos: ' + filho + '<br>País : ' + pais.value;
+            dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + pais.value;  
         }
     } else {
         dados.innerHTML = '<p style="font-size: 16px; color: red;">Precisa preencher todos os dados do Formulário.</p>';
