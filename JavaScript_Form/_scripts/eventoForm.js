@@ -148,14 +148,17 @@ window.onload = function() {
 function enviar() {
     var nome = document.querySelector('input#nome').value;
     var email = document.querySelector('input#email').value;
+    var filho = document.querySelector('input#valor').value;
+    var dataNasc = document.querySelector('input#dataNasc').value;
+    
     var pais = document.querySelector('input#pais');
     var escolherpais = document.querySelector('input#escolherpais');
 
     if (escolherpais.checked == false) {
         var nPais = pais.value = 'Brasil';
-        dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>País : ' + nPais;
+        dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>Data de Nascimento: ' + dataNasc + '<br>Quantidade de Filhos: ' + filho + '<br>País : ' + nPais;  
     } else {
-        dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>País : ' + pais.value;
+        dados.innerHTML = 'Nome: ' + nome + '<br>E-mail : ' + email + '<br>Data de Nascimento: ' + dataNasc + '<br>Quantidade de Filhos: ' + filho + '<br>País : ' + pais.value;
     }
     
 }

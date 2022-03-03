@@ -149,6 +149,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	border-bottom: 1px solid black;
 }
 
+.labelNasc {
+	font-size: 16px;
+}
 
 .divChecar {
 	display: inline-flex;
