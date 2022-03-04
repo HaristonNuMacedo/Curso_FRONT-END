@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço dinâmico</title>
+    <link href="_css/dinamico.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+    <div class="tabelaPre">
+        <div class="titulos1">Tabela de preço - Para curso de Programação</div>
+
+        <section>
+            <label>Defina uma programação semanal</label><br>
+            <div>
+                <select id="horario" name="horario" >
+                    <option value="h01">30 minutos por dia</option>
+                    <option value="h02">1 hora por dia</option>
+                    <option value="h03">2 horas por dia</option>
+                </select>
+
+                <select id="semanal" name="semanal">
+                    <option value="m01">1 dia por semana</option>
+                    <option value="m02">2 dias por semana</option>
+                    <option value="m03">3 dias por semana</option>
+                    <option value="m04">4 dias por semana</option>
+                    <option value="m05">5 dias por semana</option>
+                </select>
+            </div>
+
+            <div class="linha"></div>
+            <div class="resultadoPreco">
+                <div><div id="resultado"></div><span style="font-size: 18px;"> por mês</span></div>
+            </div>
+            <div class="confirmarC">Confirmar Contrato</div>
+
+            <label style="font-size: 16px; display: block;">Altere, pause ou cancele seu plano a qualquer momento.</label>
+        </section>
+    </div>
+
+      <script>
+      $( "select" )
+        .change(function() {
+          var str = ""; 
+          var strSemanal = "";
+          var preco = 0;
+          $( "#horario option:selected" ).each(function() {
+            str += $( this ).text();
+          });
+
+          $( "#semanal option:selected" ).each(function() {
+            strSemanal += $( this ).text();
+          });
+
+          if (str == "30 minutos por dia") {
+            preco += 40;
+
+            if (strSemanal == "1 dia por semana") {
+                preco += 10; 
+            } else if(strSemanal == "2 dias por semana") {
+                preco += 80; 
+            } else if(strSemanal == "3 dias por semana") {
+                preco += 150; 
+            } else if(strSemanal == "4 dias por semana") {
+                preco += 220; 
+            } else if(strSemanal == "5 dias por semana") {
+                preco += 290; 
+            }
+
+          } else if (str == "1 hora por dia") {
+            preco += 120;
+
+            if (strSemanal == "1 dia por semana") {
+                preco += 10; 
+            } else if(strSemanal == "2 dias por semana") {
+                preco += 80; 
+            } else if(strSemanal == "3 dias por semana") {
+                preco += 150; 
+            } else if(strSemanal == "4 dias por semana") {
+                preco += 220; 
+            } else if(strSemanal == "5 dias por semana") {
+                preco += 290; 
+            }
+
+          } else if (str == "2 horas por dia") {
+            preco += 225;
+
+            if (strSemanal == "1 dia por semana") {
+                preco += 10; 
+            } else if(strSemanal == "2 dias por semana") {
+                preco += 80; 
+            } else if(strSemanal == "3 dias por semana") {
+                preco += 150; 
+            } else if(strSemanal == "4 dias por semana") {
+                preco += 220; 
+            } else if(strSemanal == "5 dias por semana") {
+                preco += 290; 
+            }
+          }
+
+          $( "#resultado" ).text( "R$ " + preco );
+        })
+        .trigger( "change" );
+      </script>
+    <script>
+
+    </script>
+</body>
+</html>

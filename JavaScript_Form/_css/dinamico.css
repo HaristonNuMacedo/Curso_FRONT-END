@@ -1,0 +1,104 @@
+body {
+    background-color: rgb(57, 158, 167);
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.tabelaPre {
+    width: 600px;
+    position: absolute;
+    left: 28%;
+    padding: 5px;
+}
+
+.tabelaPre .titulos1 {
+    font-size: 38px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+section {
+    margin-top: 50px;
+}
+
+section label {
+    color: rgb(5, 44, 71);
+    font-size: 18px;
+    margin-left: 7px;
+}
+
+select {
+	width: 280px;
+	padding: 20px 15px;
+	border-radius: 5px;
+    margin-top: 10px;
+	font-size: 1.1em;
+	color: #fff;
+    border: 2px solid rgb(5, 44, 71);
+    display: inline-flex;
+
+    cursor: pointer;
+	-webkit-appearance:none; 
+	background: rgb(5, 44, 71) url("../_img/right-arrow.png") 95.5% 50% no-repeat;
+}
+
+select:nth-child(1) {
+    margin-left: 7px;
+}
+
+select:nth-child(2) {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+select:hover {
+    border: 2px solid rgb(2, 23, 37);
+}
+
+select:focus {
+    border: 2px solid rgb(2, 23, 37);
+	outline:none;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
+
+div.linha {
+    border-top: 1px solid #228891;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#resultado {
+    display: inline-flex;
+    font-size: 24px;
+    margin-left: 7px;
+}
+
+div.resultadoPreco {
+    width: 245px;
+    padding: 15px 15px;
+	border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-left: 7px;
+	font-size: 1.1em;
+    background-color: #fff;
+	color: #000;
+    border: 2px solid #fff;
+    display: inline-flex;
+}
+
+.confirmarC {
+    background: rgb(255, 201, 41);
+    color: #228891;
+    display: inline-flex;
+
+    width: 250px;
+    padding: 20px 15px;
+	border-radius: 5px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+	font-size: 1.1em;
+    cursor: pointer;
+}
