@@ -8,6 +8,7 @@ body {
     position: absolute;
     left: 28%;
     padding: 5px;
+    margin-top: 50px;
 }
 
 .tabelaPre .titulos1 {
@@ -31,7 +32,7 @@ section label {
 select {
 	width: 280px;
 	padding: 20px 15px;
-	border-radius: 5px;
+	border-radius: 6px;
     margin-top: 10px;
 	font-size: 1.1em;
 	color: #fff;
@@ -40,7 +41,7 @@ select {
 
     cursor: pointer;
 	-webkit-appearance:none; 
-	background: rgb(5, 44, 71) url("../_img/right-arrow.png") 95.5% 50% no-repeat;
+	background: rgb(5, 44, 71) url("../_img/right-arrow.png") 92% 50% no-repeat;
 }
 
 select:nth-child(1) {
@@ -53,7 +54,7 @@ select:nth-child(2) {
 }
 
 select:hover {
-    border: 2px solid rgb(2, 23, 37);
+    border: 2px solid #021725;
 }
 
 select:focus {
@@ -77,9 +78,9 @@ div#resultado {
 
 div.resultadoPreco {
     width: 245px;
-    padding: 15px 15px;
-	border-radius: 5px;
-    margin-top: 20px;
+    padding: 18px 15px;
+	border-radius: 4px;
+    margin-top: 10px;
     margin-bottom: 25px;
     margin-left: 7px;
 	font-size: 1.1em;
@@ -90,15 +91,20 @@ div.resultadoPreco {
 }
 
 .confirmarC {
-    background: rgb(255, 201, 41);
+    background: rgb(255, 201, 41) url("../_img/setaAvancar.png") 85% 45% no-repeat;
+    background-size: 36px;
     color: #228891;
     display: inline-flex;
 
-    width: 250px;
-    padding: 20px 15px;
-	border-radius: 5px;
-    margin-bottom: 25px;
+    width: 210px;
+    padding: 20px 35px;
+	border-radius: 6px;
+    margin-bottom: 30px;
     margin-left: 20px;
 	font-size: 1.1em;
     cursor: pointer;
+
+    position: relative;
+    top: -2px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 20px
 }

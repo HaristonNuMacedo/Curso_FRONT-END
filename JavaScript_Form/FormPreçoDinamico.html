@@ -29,18 +29,18 @@
                     <option value="m01">1 dia por semana</option>
                     <option value="m02">2 dias por semana</option>
                     <option value="m03">3 dias por semana</option>
-                    <option value="m04">4 dias por semana</option>
                     <option value="m05">5 dias por semana</option>
                 </select>
             </div>
 
             <div class="linha"></div>
             <div class="resultadoPreco">
+                <!-- https://pt.stackoverflow.com/questions/368503/formatar-n%C3%BAmero-com-javascript -->
                 <div><div id="resultado"></div><span style="font-size: 18px;"> por mês</span></div>
             </div>
             <div class="confirmarC">Confirmar Contrato</div>
 
-            <label style="font-size: 16px; display: block;">Altere, pause ou cancele seu plano a qualquer momento.</label>
+            <label style="font-size: 14px; display: block;">Altere, pause ou cancele seu plano a qualquer momento.</label>
         </section>
     </div>
 
@@ -64,28 +64,24 @@
             if (strSemanal == "1 dia por semana") {
                 preco += 10; 
             } else if(strSemanal == "2 dias por semana") {
-                preco += 80; 
+                preco += 120; 
             } else if(strSemanal == "3 dias por semana") {
-                preco += 150; 
-            } else if(strSemanal == "4 dias por semana") {
-                preco += 220; 
+                preco += 195; 
             } else if(strSemanal == "5 dias por semana") {
-                preco += 290; 
+                preco += 365; 
             }
 
           } else if (str == "1 hora por dia") {
-            preco += 120;
+            preco += 95;
 
             if (strSemanal == "1 dia por semana") {
                 preco += 10; 
             } else if(strSemanal == "2 dias por semana") {
-                preco += 80; 
+                preco += 180; 
             } else if(strSemanal == "3 dias por semana") {
-                preco += 150; 
-            } else if(strSemanal == "4 dias por semana") {
-                preco += 220; 
+                preco += 300; 
             } else if(strSemanal == "5 dias por semana") {
-                preco += 290; 
+                preco += 505; 
             }
 
           } else if (str == "2 horas por dia") {
@@ -94,17 +90,15 @@
             if (strSemanal == "1 dia por semana") {
                 preco += 10; 
             } else if(strSemanal == "2 dias por semana") {
-                preco += 80; 
+                preco += 380; 
             } else if(strSemanal == "3 dias por semana") {
-                preco += 150; 
-            } else if(strSemanal == "4 dias por semana") {
-                preco += 220; 
+                preco += 500; 
             } else if(strSemanal == "5 dias por semana") {
-                preco += 290; 
+                preco += 805; 
             }
           }
 
-          $( "#resultado" ).text( "R$ " + preco );
+          $( "#resultado" ).text( "R$ " + preco.toLocaleString('pt-BR') );
         })
         .trigger( "change" );
       </script>
