@@ -21,14 +21,13 @@ window.onload = function() {
                     document.documentElement.style.setProperty('--color', color);
                 }
                 if (caixa.value != "") {
-                    label.innerHTML = 'Nome preenchido!';
+                    label.innerHTML = '';
                 } else {
                     label.innerHTML = '&#9664; Digite o seu nome completo, por favor!';
                 }
             } else {
                 label.innerHTML = '';
             }
-        
     }
 
     caixa.onblur = function() {  
@@ -53,7 +52,7 @@ window.onload = function() {
                 label2.innerHTML = '&#9664; Campo está vazio. Por favor, preenche-o com nome.';
             } else {
                 label2.innerHTML = '';
-                label.innerHTML = 'Nome preenchido!';
+                label.innerHTML = '';
             }
         } else {
             label2.innerHTML = '';
@@ -83,7 +82,7 @@ window.onload = function() {
                 }
 
                 if (caixa.value != "") {
-                    label01.innerHTML = 'E-mail preenchido!';
+                    label01.innerHTML = '';
                 } else {
                     label01.innerHTML = '&#9664; Digite o seu E-mail, por favor!';
                 }
@@ -114,7 +113,7 @@ window.onload = function() {
                 label02.innerHTML = '&#9664; Campo está vazio. Por favor, preenche-o com E-mail.';
             } else {
                 label02.innerHTML = '';
-                label01.innerHTML = 'E-mail preenchido!';
+                label01.innerHTML = '';
             }
         } else {
             label02.innerHTML = '';
