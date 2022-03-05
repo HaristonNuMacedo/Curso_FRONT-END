@@ -33,6 +33,12 @@
                 </select>
             </div>
 
+            <label class="texto02">Selecione um nível de comprometimento</label><br>
+            <div class="escolhaMes">
+                <div id="mes01">1 mês<br><span>-</span></div>
+                <div id="mes12">12 mês<br><span>25% OFF</span></div>
+            </div>
+
             <div class="linha"></div>
             <div class="resultadoPreco">
                 <!-- https://pt.stackoverflow.com/questions/368503/formatar-n%C3%BAmero-com-javascript -->
@@ -102,8 +108,31 @@
         })
         .trigger( "change" );
       </script>
-    <script>
 
+    <script>
+        function mudarCor(teste) {
+            mes01.style.backgroundColor = teste;
+            mes12.style.backgroundColor = "rgba(75, 136, 145, 0.8)";
+        }
+
+        function mudarCor2(teste2) {
+            mes12.style.backgroundColor = teste2;
+            mes01.style.backgroundColor = "rgba(75, 136, 145, 0.8)";
+        }
+
+        function iniciar() {
+            mes01.style.backgroundColor = '#04385e';
+            mes01.addEventListener("click", function() {
+                mudarCor("#04385e");
+            });
+
+            mes12.addEventListener("click", function() {
+                mudarCor2("#04385e");
+            });
+
+        }
+
+        window.onload = iniciar;
     </script>
 </body>
 </html>

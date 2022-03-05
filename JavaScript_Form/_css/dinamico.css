@@ -29,6 +29,12 @@ section label {
     margin-left: 7px;
 }
 
+section label.escolhaMes {
+    color: rgb(5, 44, 71);
+    font-size: 18px;
+    margin-left: 7px;
+}
+
 select {
 	width: 280px;
 	padding: 20px 15px;
@@ -41,7 +47,7 @@ select {
 
     cursor: pointer;
 	-webkit-appearance:none; 
-	background: rgb(5, 44, 71) url("../_img/right-arrow.png") 92% 50% no-repeat;
+	background: #04385e url("../_img/right-arrow.png") 92% 50% no-repeat;
 }
 
 select:nth-child(1) {
@@ -50,11 +56,12 @@ select:nth-child(1) {
 
 select:nth-child(2) {
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 select:hover {
     border: 2px solid #021725;
+    background: #052c47 url("../_img/right-arrow.png") 92% 50% no-repeat;
 }
 
 select:focus {
@@ -63,6 +70,54 @@ select:focus {
 	border-top: 2px solid #fff;
 	border-bottom: 2px solid #fff;
 }
+
+
+
+
+
+.escolhaMes {
+    display: inline-flex;
+    margin-top: 10px;
+    margin-left: 7px;
+    text-align: center;
+}
+
+#mes01 {
+    width: 192px;
+    padding: 10px 50px;
+    color: #fff;
+    background-color: rgba(75, 136, 145, 0.5);
+    cursor: pointer;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    font-size: 18px;
+}
+
+#mes01 span {
+    font-size: 15px;
+    color: #ddd;
+}
+
+#mes12 {
+    width: 192px;
+    padding: 10px 50px;
+    color: #fff;
+    background-color: rgba(75, 136, 145, 0.5);
+    cursor: pointer;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    font-size: 18px;
+}
+
+#mes12 span {
+    font-size: 15px;
+    color: #ddd;
+}
+
+
+
+
+
 
 div.linha {
     border-top: 1px solid #228891;
@@ -91,9 +146,9 @@ div.resultadoPreco {
 }
 
 .confirmarC {
-    background: rgb(255, 201, 41) url("../_img/setaAvancar.png") 85% 45% no-repeat;
-    background-size: 36px;
-    color: #228891;
+    background: rgb(255, 201, 41) url("../_img/setaAvancar.png") 85% 50% no-repeat;
+    background-size: 32px;
+    color: #135f66;
     display: inline-flex;
 
     width: 210px;
@@ -101,7 +156,7 @@ div.resultadoPreco {
 	border-radius: 6px;
     margin-bottom: 30px;
     margin-left: 20px;
-	font-size: 1.1em;
+	font-size: 1.2em;
     cursor: pointer;
 
     position: relative;
