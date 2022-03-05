@@ -120,11 +120,6 @@ window.onload = function() {
         }
     }
 
-    // -----------------------------------------------------------
-    // DATA DE NASCIMENTO DO FOMULÁRIO
-
-
-
     // ---------------------------------------------------------------
     // CHECKBOX DO PAIS
     qtdFilhos.onclick = function() {
@@ -161,6 +156,16 @@ window.onload = function() {
         var dataNasc = document.querySelector('input#dataNasc').value;
         data = new Date(dataNasc);
         dataFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
+
+        var ano_atual = new Date().getFullYear();
+        var ano_informado = dataFormatada.split('/')[2]; // Pega apenas o ano da data de nascimento do formulário
+        var idadeInfo = ano_atual - ano_informado;
+        var idadeVerfi = "";
+        if (idadeInfo >= 18) {
+            idadeVerfi = "Maior de idade!";
+        } else if(idadeInfo <= 18) {
+            idadeVerfi = "Menor de idade!";
+        }
         
         var pais = document.querySelector('input#pais');
         var escolherpais = document.querySelector('input#escolherpais');
@@ -168,12 +173,14 @@ window.onload = function() {
         if (nome != "" && email != "" && dataNasc != "") {
             if (escolherpais.checked == false) {
                 var nPais = pais.value = 'Brasil';
-                dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + nPais;  
+                dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada 
+                    + '<br><strong>Idade: </strong>' + idadeInfo + ', ' + idadeVerfi + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + nPais;  
             } else {
-                dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + pais.value;  
+                dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada 
+                    + '<br><strong>Idade: </strong>' + idadeInfo + ', ' + idadeVerfi + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + pais.value;  
             }
         } else {
-            dados.innerHTML = '<p style="font-size: 16px; color: red;">Precisa preencher todos os dados do Formulário.</p>';
+            dados.innerHTML = '<p style="font-size: 18px; color: red;">Precisa preencher todos os dados do Formulário!</p>';
         }
         
     }

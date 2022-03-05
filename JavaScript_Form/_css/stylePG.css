@@ -102,7 +102,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	left: 700px;
 	border: 0px;
 	color: var(--color);
-	border-bottom: 1px solid var(--color);
+	border-bottom: 1px solid black;
 }
 
 #msg2{
@@ -111,7 +111,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	left: 700px;
 	border: 0px;
 	color: var(--color2);
-	border-bottom: 1px solid var(--color2);
+	border-bottom: 1px solid black;
 	background-color: #ddd;
 }
 
@@ -124,7 +124,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	left: 700px;
 	border: 0px;
 	color: var(--color);
-	border-bottom: 1px solid var(--color);
+	border-bottom: 1px solid black;
 }
 
 #msgE2 {
@@ -133,21 +133,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	left: 700px;
 	border: 0px;
 	color: var(--color2);
-	border-bottom: 1px solid var(--color2);
+	border-bottom: 1px solid black;
 	background-color: #ddd;
 }
 
-
-
 	/* MENSAGEM DE VERIFICAÇÃO SEXO */
-#msgS {
-	position: absolute;
-	top: 270px;
-	left: 700px;
-	border: 0px;
-	color: black;
-	border-bottom: 1px solid black;
-}
+
 
 .labelNasc {
 	font-size: 16px;
@@ -186,3 +177,37 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*div#pais {
 	display: none;
 }*/
+
+
+
+
+
+
+.tDados {
+	position: absolute;
+	top: 375px;
+	right: 100px;
+	width: 450px;
+	border: 1px solid rgb(9, 71, 87);
+	padding: 25px 15px;
+	background-color: rgb(35, 157, 187, 10%);
+	box-shadow: rgb(0 0 0 / 50%) -5px 5px 5px
+}
+
+.tDados .tMD {
+	font-size: 25px;
+	font-weight: 600;
+	position: relative;
+	text-align: center;
+	color: rgb(35, 157, 187);
+}
+
+#dados {
+	font-size: 18px;
+	margin-top: 25px;
+	line-height: 30px;
+}
+
+#dados strong {
+	color: rgb(9, 71, 87);
+}
