@@ -36,7 +36,7 @@ section label.escolhaMes {
 }
 
 select {
-	width: 280px;
+	width: 285px;
 	padding: 20px 15px;
 	border-radius: 6px;
     margin-top: 10px;
@@ -55,7 +55,7 @@ select:nth-child(1) {
 }
 
 select:nth-child(2) {
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 30px;
 }
 
@@ -132,7 +132,7 @@ div#resultado {
 }
 
 div.resultadoPreco {
-    width: 245px;
+    width: 250px;
     padding: 18px 15px;
 	border-radius: 4px;
     margin-top: 10px;
@@ -151,11 +151,11 @@ div.resultadoPreco {
     color: #135f66;
     display: inline-flex;
 
-    width: 210px;
+    width: 215px;
     padding: 20px 35px;
 	border-radius: 6px;
     margin-bottom: 30px;
-    margin-left: 20px;
+    margin-left: 10px;
 	font-size: 1.2em;
     cursor: pointer;
 
