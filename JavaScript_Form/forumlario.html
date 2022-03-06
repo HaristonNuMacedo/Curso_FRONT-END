@@ -41,7 +41,14 @@
                 }
             });
             
-        </script>       
+        </script>      
+        
+        <script src="_scripts/jquery.maskedinput.js"></script>
+        <script>
+            $(function() {
+                $('#telefone').mask('(99) 99999-9999');
+            });
+        </script>
     </head>
     <body>
         <main>
@@ -63,6 +70,8 @@
 
                 <br><label for="dataNasc" class="labelNasc">Data de Nascimento: </label>
                 <input type="date" id="dataNasc" name="dataNasc" placeholder="Data de Nascimento" />	
+
+                <input type="text"  id="telefone" name="telefone" placeholder="Telefone" />
 
                 <!-- VERIFICAR Quantidade de Filhos -->
                 <h3>Você possui filhos?</h3>

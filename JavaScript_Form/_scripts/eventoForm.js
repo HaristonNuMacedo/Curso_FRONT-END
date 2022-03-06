@@ -152,6 +152,7 @@ window.onload = function() {
         var nome = document.querySelector('input#nome').value;
         var email = document.querySelector('input#email').value;
         var filho = document.querySelector('input#valor').value;
+        var telefone = document.querySelector('input#telefone').value;
         
         var dataNasc = document.querySelector('input#dataNasc').value;
         data = new Date(dataNasc);
@@ -174,10 +175,10 @@ window.onload = function() {
             if (escolherpais.checked == false) {
                 var nPais = pais.value = 'Brasil';
                 dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada 
-                    + '<br><strong>Idade: </strong>' + idadeInfo + ', ' + idadeVerfi + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + nPais;  
+                    + '<br><strong>Idade: </strong>' + idadeInfo + ', ' + idadeVerfi + '<br><strong>Telefone : </strong>' + telefone + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + nPais;  
             } else {
                 dados.innerHTML = '<strong>Nome: </strong>' + nome + '<br><strong>E-mail : </strong>' + email + '<br><strong>Data de Nascimento: </strong>' + dataFormatada 
-                    + '<br><strong>Idade: </strong>' + idadeInfo + ', ' + idadeVerfi + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + pais.value;  
+                    + '<br><strong>Idade: </strong>' + idadeInfo + ', ' + idadeVerfi + '<br><strong>Telefone : </strong>' + telefone + '<br><strong>Quantidade de Filhos: </strong>' + filho + '<br><strong>País: </strong>' + pais.value;  
             }
         } else {
             dados.innerHTML = '<p style="font-size: 18px; color: red;">Precisa preencher todos os dados do Formulário!</p>';
