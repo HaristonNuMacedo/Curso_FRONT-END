@@ -36,13 +36,14 @@
             <label class="texto02">Selecione um nível de comprometimento</label><br>
             <div class="escolhaMes">
                 <div id="mes01">1 mês<br><span class="span01">&mdash;</span></div>
-                <div id="mes12">12 mês<br><span>15% OFF</span></div>
+                <div id="mes12">12 meses<br><span>15% OFF</span></div>
             </div>
 
             <div class="linha"></div>
             <div class="resultadoPreco">
                 <!-- https://pt.stackoverflow.com/questions/368503/formatar-n%C3%BAmero-com-javascript -->
                 <div><div id="resultado"></div><span style="font-size: 18px;"> por mês</span></div>
+                <div id="desconto">15% OFF</div>
             </div>
             <div class="confirmarC">Confirmar Contrato</div>
 
@@ -63,6 +64,7 @@
           $( "#semanal option:selected" ).each(function() {
             strSemanal += $( this ).text();
           });
+
 
           if (str == "30 minutos por dia") {
             preco += 40;
@@ -87,7 +89,7 @@
             } else if(strSemanal == "3 dias por semana") {
                 preco += 300; 
             } else if(strSemanal == "5 dias por semana") {
-                preco += 505; 
+                preco += 605; 
             }
 
           } else if (str == "2 horas por dia") {
@@ -104,7 +106,23 @@
             }
           }
 
-          $( "#resultado" ).text( "R$ " + preco.toLocaleString('pt-BR') );
+          $( "#resultado" ).text( "R$ " + preco.toLocaleString('pt-BR') + ",00");
+
+         if ($( "#mes12" ).click) {
+            $( "#mes12" ).click(function() {
+                var desconto = 0;
+                desconto = preco * 0.15; //15%
+                resultado = preco - desconto;
+                $( "#resultado" ).text( "R$ " + resultado.toLocaleString('pt-BR') );
+            }) 
+        } 
+        
+        if ($( "#mes01" ).click) {
+            $( "#mes01" ).click(function() {
+                $( "#resultado" ).text( "R$ " + preco.toLocaleString('pt-BR') + ",00");
+            })
+        }
+
         })
         .trigger( "change" );
       </script>
@@ -112,22 +130,36 @@
     <script>
         function mudarCor(teste) {
             mes01.style.backgroundColor = teste;
-            mes12.style.backgroundColor = "rgba(75, 136, 145, 0.8)";
+            mes01.style.boxShadow = "rgba(0 0 0 / 40%) 0px 10px 25px";
+
+            mes12.style.boxShadow = "none";
+            mes12.style.backgroundColor = "#228891";
+
+            desconto.style.display = "none";
         }
 
         function mudarCor2(teste2) {
             mes12.style.backgroundColor = teste2;
-            mes01.style.backgroundColor = "rgba(75, 136, 145, 0.8)";
+            mes12.style.boxShadow = "rgba(0 0 0 / 40%) 0px 10px 25px";
+
+            mes01.style.boxShadow = "none";
+            mes01.style.backgroundColor = "#228891";
+
+            desconto.style.display = "block";
         }
 
         function iniciar() {
+
+            // Alguns objetos Html ativados no botão de seleção do mês
+            desconto.style.display = "none";
+            mes01.style.boxShadow = "rgba(0 0 0 / 40%) 0px 10px 25px";
             mes01.style.backgroundColor = '#04385e';
             mes01.addEventListener("click", function() {
                 mudarCor("#04385e");
             });
 
             mes12.addEventListener("click", function() {
-                mudarCor2("#04385e");
+                mudarCor2("#04385e");     
             });
         }
         window.onload = iniciar;
