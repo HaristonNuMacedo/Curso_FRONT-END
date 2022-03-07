@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dinâmico</title>
+
+    <link rel="stylesheet" href="_css/menuTabs.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <link rel="stylesheet" href="_css/tabs.css">
+        <script>
+            $(function() {
+                $( "#tabes" ).tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+                $( "#tabes li" ).removeClass("ui-corner-top" ).addClass("ui-corner-left").addClass("ui-corner-right");
+            });
+        </script> 
+
+</head>
+<body>
+    <div id="tabes">
+        <ul>
+            <li><a href="#tabs-1">Descoberta de professores nativos</a></li>
+            <li><a href="#tabs-2">Programação Flexível</a></li>
+            <li><a href="#tabs-3">Currículos para cursos especializados</a></li>
+            <li><a href="#tabs-4">Aulas Interativas</a></li>
+            <div></div>
+        </ul>
+        
+        <div id="tabs-1">
+            <div class="lado01">
+                <img src="_img/realme-c11-2021-produto-700x700.webp"> 
+            </div>
+            <div class="lado02">
+                <p><span>Pizza de Calabresa</span><br>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. </p>
+            </div>
+        </div>
+        <div id="tabs-2">
+            <div class="lado01">
+                <img src="_img/realme-c11-2021-produto-700x700.webp"> 
+            </div>
+            <div class="lado02">
+                <p><span>Pizza de Margherita</span><br>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. </p>
+            </div>
+        </div>
+        <div id="tabs-3">
+            <div class="lado01">
+                <img src="_img/realme-c11-2021-produto-700x700.webp"> 
+            </div>
+            <div class="lado02">
+                <p><span>Pizza de Quatro Queijos</span><br>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. </p>
+            </div>
+        </div>
+        <div id="tabs-4">
+            <div class="lado01">
+                <img src="_img/realme-c11-2021-produto-700x700.webp"> 
+            </div>
+            <div class="lado02">
+                <span>Pizza de chocolate e morango, com base de queijo fina</span><div>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. <br><div class="botaoInscreva">Inscreva-se</div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

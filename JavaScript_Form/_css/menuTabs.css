@@ -1,0 +1,165 @@
+body {
+    background-color: rgb(255, 201, 41);
+}
+
+#tabes{
+    margin-top: 20px;
+} 
+
+#tabes.ui-tabs-vertical {
+    width: 100%;
+    margin-left: 0%;
+    height: 500px;
+    background-color: rgb(255, 201, 41);
+    border: none;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav{
+    display: inline-block;
+    background: none;
+    border: none;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+        /*Jogando o conteúdo do menu para o 
+            final com o limite determinado no tamanho do menu */
+.ui-tabs .ui-tabs-nav li {
+    list-style: none;
+    position: relative;
+    top: 0;
+    margin: 0px 0px!important;
+    border-bottom-width: 0;
+    padding: 0 50px!important;
+    white-space: normal!important;
+    width: 220px!important;
+    text-align: end;
+}
+
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li{
+    border: 0px;
+    clear: left; /* deixa um embaixo do outro*/
+    margin-bottom: -2px;
+    outline: none;
+    padding: 0px 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    border-right: 1px solid rgb(231, 190, 6);
+}
+
+                /* ICONE PARA CADA ÍTEM NO MENU */ 
+#tabes.ui-tabs-vertical .ui-tabs-nav li:nth-child(1) {
+    background: transparent url("../_img/search.png") 93% 50% no-repeat;
+    background-size: 16px;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li:nth-child(2) {
+    background: transparent url("../_img/calendarPerson.png") 94.5% 50% no-repeat;
+    background-size: 24px;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li:nth-child(3) {
+    background: transparent url("../_img/open-book.png") 96% 50% no-repeat;
+    background-size: 32px;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li:nth-child(4) {
+    background: transparent url("../_img/alphabet.png") 94% 50% no-repeat;
+    background-size: 24px;
+}
+
+
+
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li a{
+    width: 220px;
+    display: block;
+    outline: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: -25px;
+    padding-right: 50px!important;
+    margin-right: 50px!important;
+    line-height: 30px;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active{
+    margin-bottom: -2px;
+    outline: none;
+    width: 220px;
+    background-color: transparent;
+    border-right: 2px solid #333;
+    cursor: pointer!important; 
+}
+
+
+                /* ICONE PARA CADA ÍTEM NO MENU */  
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active:nth-child(1) {
+    background: rgba(231, 190, 6, 50%) url("../_img/search.png") 93% 50% no-repeat;
+    background-size: 16px;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active:nth-child(2) {
+    background: rgba(231, 190, 6, 50%) url("../_img/calendarPerson.png") 94.5% 50% no-repeat;
+    background-size: 24px;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active:nth-child(3) {
+    background: rgba(231, 190, 6, 50%) url("../_img/open-book.png") 96% 50% no-repeat;
+    background-size: 32px;
+}
+
+#tabes.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active:nth-child(4) {
+    background: rgba(231, 190, 6, 50%) url("../_img/alphabet.png") 94% 50% no-repeat;
+    background-size: 24px;
+}
+
+
+.ui-tabs-active a{
+    color: #333!important;
+}
+
+.ui-tabs-vertical .ui-tabs-panel {
+    float: right;
+    width: 70%;
+    padding: 2px;
+    margin-top: -5px;
+}
+
+.ui-tabs-vertical .ui-tabs-panel .lado01 {
+    float: left;
+    width: 65%;
+    padding: 2px;
+    display: inline-flex;
+}
+
+.ui-tabs-vertical .ui-tabs-panel .lado01 img {
+    width: 525px;
+}
+
+.ui-tabs-vertical .ui-tabs-panel .lado02 {
+    padding: 0px;
+    margin-right: 80px;
+    margin-left: 50px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.ui-tabs-vertical .ui-tabs-panel .lado02 .botaoInscreva {
+    float: left;
+
+    border: 1px solid #333;
+    margin-top: 15px;
+    padding: 5px 15px;
+}
+
+.ui-tabs-vertical .ui-tabs-panel .lado02 span {
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 40px;
+    color: rgb(160, 139, 32);
+}
