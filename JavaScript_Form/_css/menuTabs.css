@@ -69,6 +69,11 @@ body {
     background-size: 24px;
 }
 
+#tabes.ui-tabs-vertical .ui-tabs-nav li:nth-child(5) {
+    height: 275px;
+    cursor: context-menu;
+}
+
 
 
 
@@ -94,6 +99,7 @@ body {
     border-right: 2px solid #333;
     cursor: pointer!important; 
 }
+
 
 
                 /* ICONE PARA CADA ÍTEM NO MENU */  
@@ -153,8 +159,15 @@ body {
     float: left;
 
     border: 1px solid #333;
+    text-decoration: none;
     margin-top: 15px;
     padding: 5px 15px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.ui-tabs-vertical .ui-tabs-panel .lado02 .botaoInscreva:hover {
+    background: rgba(231, 190, 6, 50%);
 }
 
 .ui-tabs-vertical .ui-tabs-panel .lado02 span {
