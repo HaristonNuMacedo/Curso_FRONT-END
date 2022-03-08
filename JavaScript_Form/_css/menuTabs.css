@@ -1,10 +1,35 @@
 body {
-    background-color: rgb(255, 201, 41);
+    background-color: #ffc929;
+    margin-bottom: 0;
 }
 
 #tabes{
     margin-top: 20px;
+    margin-bottom: 0;
 } 
+
+#tabes .tituloPrinc {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    left: 25%;
+    margin-bottom: 80px;
+}
+
+#tabes .tituloPrinc div:nth-child(1) {
+    color: #333;
+    font-size: 36px;
+    font-weight: 500;
+    display: block;
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+#tabes .tituloPrinc div:nth-child(2) {
+    color: rgb(131, 113, 23);
+    font-size: 16px;
+    line-height: 25px;
+}
 
 #tabes.ui-tabs-vertical {
     width: 100%;
@@ -46,6 +71,7 @@ body {
     border-radius: 0px;
     cursor: pointer;
     border-right: 1px solid rgb(231, 190, 6);
+    z-index: 1;
 }
 
                 /* ICONE PARA CADA ÍTEM NO MENU */ 
@@ -133,7 +159,7 @@ body {
     float: right;
     width: 70%;
     padding: 2px;
-    margin-top: -5px;
+    margin-top: 0px;
 }
 
 .ui-tabs-vertical .ui-tabs-panel .lado01 {
@@ -145,6 +171,7 @@ body {
 
 .ui-tabs-vertical .ui-tabs-panel .lado01 img {
     width: 525px;
+    z-index: 1;
 }
 
 .ui-tabs-vertical .ui-tabs-panel .lado02 {
@@ -175,4 +202,27 @@ body {
     text-transform: uppercase;
     line-height: 40px;
     color: rgb(160, 139, 32);
+}
+
+
+
+
+
+
+
+
+
+/* Estilo de Curvas, Ondas e bordas arredondadas */
+
+svg {
+    position: relative;
+    margin-top: -225px;
+    width: 102%;
+    margin-left: -22px;
+    margin-bottom: 0;
+    transform: rotate(0deg);
+}
+
+path {
+    margin-bottom: 0;
 }
