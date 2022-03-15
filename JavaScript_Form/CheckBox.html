@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Essencial</title>
+
+		<style>
+			body {
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;	
+				background:#EEE;
+			}
+			
+			form {
+				width:860px;
+				margin:50px auto
+			}
+		
+			section {
+				float:left;
+				margin-right:10px;
+				border:1px solid #CCC;
+				border-radius:6px;		
+				padding:10px;
+				width:250px;
+				height:120px;
+				box-shadow:0 0 4px #ccc;
+				background-color:#FFF;
+			}
+			
+			label {
+				float:left;
+				width:240px;
+				display:block;
+				margin-bottom:5px;
+			}
+			
+			label.esporte {
+				border-bottom:1px dotted #ccc;
+				padding-bottom:10px;
+				margin-bottom:10px;
+			}
+			
+				
+		</style>
+        
+        <!---<script src="jquery.js"></script>--->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script>
+			$( function() {
+                $('section.esportes input:checkbox').attr('disabled','disabled');
+                $('section.esportes input:radio').click( function() {
+                    $('section.esportes input:checkbox').removeAttr('disabled');
+                    $(this).parents('.esportes').siblings('.esportes').find(':checkbox').attr('disabled','disabled');
+                    //$('section.esportes input:checkbox').prop('checked','false');
+                })
+			});
+		</script>
+
+    </head>
+
+    <body>
+    	<form action="" method="post" id="formulario">
+        	<section class="esportes">
+                <label class="esporte"><input type="radio" name="esporte">Futebol</label>
+                <label><input type="checkbox" name="Messi" value="1">Messi</label>
+                <label><input type="checkbox" name="Neymar" value="2">Neymar</label>
+                <label><input type="checkbox" name="CRonaldo" value="3">Cristiano Ronaldo</label>
+            </section>	
+  		          
+            <section class="esportes">      
+                <label class="esporte"><input type="radio" name="esporte">Formula 1</label>
+                <label><input type="checkbox" name="Vettel" value="4">Vettel</label>
+                <label><input type="checkbox" name="Alonso" value="5">Alonso</label>
+                <label><input type="checkbox" name="Hamilton" value="6">Hamilton</label>
+            </section>  			
+
+			<section class="esportes">
+                <label class="esporte"><input type="radio" name="esporte">Tenis</label>
+                <label><input type="checkbox" name="Djokovic" value="7">Djokovic</label>
+                <label><input type="checkbox" name="Murray" value="8">Murray</label>
+                <label><input type="checkbox" name="Ferrer" value="9">Ferrer</label>
+            </section>	
+              	           
+  
+        </form>
+    
+    </body>
+</html>
