@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="_css/conteudo3D.css"/>
+<div class="conteudo">
+    <div class="foto">
+        <img src="img/aspcore.png" />
+        <img src="img/aspcore.png" />
+        <img src="img/aspcore.png" />
+        <img src="img/aspcore.png" />
+    </div>
+</div>
+
+<div class="conteudo2">
+    <div class="formas">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+        <br>
+        
+        <div class="conteudo3">
+            <div class="formas2">
+                <div class="loading"></div>
+                <div class="loading"></div>
+                <div class="loading"></div>
+                <div class="loading"></div>
+            </div>
+        </div>
+
+
+
+    
+		<style type="text/css">
+            .conteudo3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .formas2 {
+        position: relative;
+        width: 360px;
+        height: 360px;
+        transform: rotate(-30deg) skew(25deg) scale(0.5);
+        background: #1d1b1b;
+    }
+
+    .formas2 div {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .formas2 div:nth-child(1) {
+            background-color: #aaa;
+            width: 100%;
+            height: 100%;
+        }
+
+        .formas2 div:nth-child(2) {
+            background-color: #888;
+            width: 100%;
+            height: 100%;
+        }
+
+        .formas2 div:nth-child(3) {
+            background-color: #555;
+            width: 100%;
+            height: 100%;
+        }
+
+        .formas2 div:nth-child(4) {
+            background-color: #222;
+            width: 100%;
+            height: 100%;
+        }
+
+    
+        .formas2 div:nth-child(1) {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            /* Aqui declaramos nossa animação inline */
+			animation: rotate 1.5s linear infinite;
+            opacity: 0.2;
+        }
+    
+        .formas2 div:nth-child(2) {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            /* Aqui declaramos nossa animação inline */
+			animation: rotate2 1.5s linear infinite;
+            opacity: 0.4;
+        }
+    
+        .formas2 div:nth-child(3) {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            /* Aqui declaramos nossa animação inline */
+			animation: rotate3 1.5s linear infinite; 
+            opacity: 0.6;
+        }
+
+        .formas2 div:nth-child(4) {
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            /* Aqui declaramos nossa animação inline */
+			animation: rotate4 1.5s linear infinite;
+            opacity: 0.8;
+        }
+    
+    
+			/* Aqui definimos a nossa animação com o nome "rotate" */
+			@keyframes rotate {
+				from {
+					transform: translate(0px, 0px); /*rotate(400deg);*/
+				}
+
+				to {
+					transform: translate(160px, -160px); /*rotate(400deg);*/
+				}
+			}
+            @keyframes rotate2 {
+				from {
+					transform: translate(0px, 0px); /*rotate(200deg);*/
+				}
+
+				to {
+					transform: translate(120px, -120px); /*rotate(200deg);*/
+				}
+			}
+            @keyframes rotate3 {
+				from {
+					transform: translate(0px, 0px);
+				}
+
+				to {
+					transform: translate(80px, -80px);
+				}
+			}
+            @keyframes rotate4 {
+				from {
+					transform: translate(0px, 0px);
+				}
+
+				to {
+					transform: translate(40px, -40px);
+				}
+			}
+		</style>
+		
+        
