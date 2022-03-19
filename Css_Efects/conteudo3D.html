@@ -17,141 +17,46 @@
     </div>
 </div>
 
-        <br>
-        
-        <div class="conteudo3">
-            <div class="formas2">
-                <div class="loading"></div>
-                <div class="loading"></div>
-                <div class="loading"></div>
-                <div class="loading"></div>
-            </div>
+    <div class='scrolldown'>
+        <div class="chevrons">
+            <div class='chevrondown'></div>
+            <div class='chevrondown'></div>
         </div>
+    </div>
+
+    <br>
+
+    <link rel="stylesheet" href="_css/bootstrap.css"/>
+    <link rel="stylesheet" href="_css/bootstrap.min.css"/>
+
+    <div class="wrapper" style="padding-bottom: 50px;">
+        <div class="icon facebook">
+          <div class="tooltip">Facebook</div>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg></span>
+        </div>
+        <div class="icon twitter">
+          <div class="tooltip">Twitter</div>
+          <span><i class="fab fa-twitter"></i></span>
+        </div>
+        <div class="icon instagram">
+          <div class="tooltip">Instagram</div>
+          <span><i class="fab fa-instagram"></i></span>
+        </div>
+        <div class="icon github">
+          <div class="tooltip">Github</div>
+          <span><i class="fab fa-github"></i></span>
+        </div>
+        <div class="icon youtube">
+          <div class="tooltip">Youtube</div>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+          </svg></span>
+        </div>
+      </div>
 
 
-
-    
-		<style type="text/css">
-            .conteudo3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .formas2 {
-        position: relative;
-        width: 360px;
-        height: 360px;
-        transform: rotate(-30deg) skew(25deg) scale(0.5);
-        background: #1d1b1b;
-    }
-
-    .formas2 div {
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            transition: 0.5s;
-        }
-
-        .formas2 div:nth-child(1) {
-            background-color: #aaa;
-            width: 100%;
-            height: 100%;
-        }
-
-        .formas2 div:nth-child(2) {
-            background-color: #888;
-            width: 100%;
-            height: 100%;
-        }
-
-        .formas2 div:nth-child(3) {
-            background-color: #555;
-            width: 100%;
-            height: 100%;
-        }
-
-        .formas2 div:nth-child(4) {
-            background-color: #222;
-            width: 100%;
-            height: 100%;
-        }
-
-    
-        .formas2 div:nth-child(1) {
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            /* Aqui declaramos nossa animação inline */
-			animation: rotate 1.5s linear infinite;
-            opacity: 0.2;
-        }
-    
-        .formas2 div:nth-child(2) {
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            /* Aqui declaramos nossa animação inline */
-			animation: rotate2 1.5s linear infinite;
-            opacity: 0.4;
-        }
-    
-        .formas2 div:nth-child(3) {
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            /* Aqui declaramos nossa animação inline */
-			animation: rotate3 1.5s linear infinite; 
-            opacity: 0.6;
-        }
-
-        .formas2 div:nth-child(4) {
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            /* Aqui declaramos nossa animação inline */
-			animation: rotate4 1.5s linear infinite;
-            opacity: 0.8;
-        }
-    
-    
-			/* Aqui definimos a nossa animação com o nome "rotate" */
-			@keyframes rotate {
-				from {
-					transform: translate(0px, 0px); /*rotate(400deg);*/
-				}
-
-				to {
-					transform: translate(160px, -160px); /*rotate(400deg);*/
-				}
-			}
-            @keyframes rotate2 {
-				from {
-					transform: translate(0px, 0px); /*rotate(200deg);*/
-				}
-
-				to {
-					transform: translate(120px, -120px); /*rotate(200deg);*/
-				}
-			}
-            @keyframes rotate3 {
-				from {
-					transform: translate(0px, 0px);
-				}
-
-				to {
-					transform: translate(80px, -80px);
-				}
-			}
-            @keyframes rotate4 {
-				from {
-					transform: translate(0px, 0px);
-				}
-
-				to {
-					transform: translate(40px, -40px);
-				}
-			}
-		</style>
+      <br>
 		
         

@@ -49,6 +49,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
     /* PARETE 2 */
 
 
@@ -116,6 +136,301 @@
             width: 100%;
             position: absolute;
             height: 100%;
-            transition: 0.5s;
+            transition: all 800ms ease;
         }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        body {
+            /*fullscree center but no horizontal scrollbar*/
+            background-color: darkslategray;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            max-width: 100vw;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            overflow-x: hidden;
+          }
+          /* copy from here */
+          .scrolldown {
+            --color: black;
+            --sizeX: 30px;
+            --sizeY: 50px;
+            position: relative;
+            width: var(--sizeX);
+            height: var(--sizeY);
+            margin-left: var(sizeX / 2);
+            border: calc(var(--sizeX) / 10) solid var(--color);
+            border-radius: 50px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+          }
+          
+          .scrolldown::before {
+            content: "";
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            width: 6px;
+            height: 6px;
+            margin-left: -3px;
+            background-color: var(--color);
+            border-radius: 100%;
+            animation: scrolldown-anim 2s infinite;
+            box-sizing: border-box;
+            box-shadow: 0px -5px 3px 1px #ffffff66;
+          }
+          
+          @keyframes scrolldown-anim {
+            0% {
+              opacity: 0;
+              height: 6px;
+            }
+            40% {
+              opacity: 1;
+              height: 10px;
+            }
+            80% {
+              transform: translate(0, 20px);
+              height: 10px;
+              opacity: 0;
+            }
+            100% {
+              height: 3px;
+              opacity: 0;
+            }
+          }
+          .chevrons {
+            padding: 6px 0 0 0;
+            margin-left: -3px;
+            margin-top: 48px;
+            width: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .chevrondown {
+            margin-top: -6px;
+            position: relative;
+            border: solid var(--color);
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+          }
+          .chevrondown:nth-child(odd) {
+            animation: pulse 500ms ease infinite alternate;
+          }
+          .chevrondown:nth-child(even) {
+            animation: pulse 500ms ease infinite alternate 250ms;
+          }
+          @keyframes pulse {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 0.5;
+            }
+          }
+          /*copy until here */
+          
+
+
+
+
+
+
+
+
+       
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          /*
+    Auther: Abdelrhman Said
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}
+
+.wrapper {
+  display: inline-flex;
+  
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+
+
     
