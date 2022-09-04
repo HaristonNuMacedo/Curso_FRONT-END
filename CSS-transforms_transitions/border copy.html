@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+
+    <style>
+        body {
+            background-color: #999;
+            border: 0;
+            margin: 0;
+        }
+
+        .servicos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quadro {
+            position: relative;
+            left: 0px;
+            top: 10px;
+            width: 1320px;
+            height: 680px;
+            padding: 0px;
+            background-color: #fff;
+        }
+
+        .janela:nth-child(1){
+            position: absolute;
+            width: 680px;
+            height: 340px;
+            background-color: blue;
+            top: 0px;
+            left: 0px;
+
+            border-top-left-radius: 25px;
+        }
+
+
+        .janela:nth-child(2) {
+            position: absolute;
+            width: 680px;
+            height: 340px;
+            background-color: blue;
+            bottom: 0px;
+            left: 0px;
+
+            border-bottom-left-radius: 25px;
+        }
+
+        .janela:nth-child(3){
+            position: absolute;
+            width: 680px;
+            height: 340px;
+            background-color: blue;
+            right: 0px;
+            top: 0px;
+
+            border-top-right-radius: 25px;
+        }
+
+        .janela:nth-child(4) {
+            position: absolute;
+            width: 680px;
+            height: 340px;
+            background-color: blue;
+            bottom: 0px;
+            right: 0px;
+
+            border-bottom-right-radius: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="servicos">
+        <div class="quadro">
+            <div class="janela"></div>
+            <div class="janela"></div>
+            <div class="janela"></div>
+            <div class="janela"></div>
+            <div id="janela"></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
