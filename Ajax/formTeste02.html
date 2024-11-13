@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulário Verificação</title>
+        <link href="_css/stylePG00.css" rel="stylesheet">
+        <link href="_css/borderStyle.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <main>
+            <h1>Formulário</h1>
+                <!-- VERIFICAR NOME -->
+                <div id="msg"></div><div id="msg2"></div>
+                <input type="text"  id="nome"   name="nome"   data-color="#fff"  placeholder="Digite a tarefa"  />
+
+                <!-- VERIFICAR E-MAIL -->
+                <div id="msgE"></div><div id="msgE2"></div>
+                <textarea name="taskDescription" placeholder="Escreva uma descrição"></textarea>	
+
+                <select id="sexo" name="sexo"  data-color3="#fff">
+                    <option>Sexo: </option>
+                    <option value="m"><i class="fas fa-flag" style="color: red;"></i>Masculino </option>
+                    <option value="f"><i class="fas fa-flag" style="color: red;"></i>Feminino </option>
+                    <option value="ind"><i class="fas fa-flag" style="color: red;"></i>outros </option>
+                </select>
+
+                <!-- VERIFICAR PAIS -->
+                <input type="text"  id="pais"   name="pais"   data-color="#fff"  placeholder="Qual País?"  />
+
+                <input type="submit" value="Confirmar" id="btn" onclick="enviar()"/>  
+
+        </main>
+
+        <div class="container01">
+            <div class="underline"></div>
+        </div>
+
+    </body>
+    <script>
+        
+    </script>
+</html>
